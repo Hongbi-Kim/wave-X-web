@@ -12,7 +12,7 @@ const translations = {
   ko: {
     // Navigation
     'nav.home': '홈',
-    'nav.about': '회사 소개',
+    'nav.about': '소개',
     'nav.services': '서비스',
     'nav.philosophy': '철학',
     'nav.team': '팀',
@@ -48,7 +48,7 @@ const translations = {
     'waveI.feature2': '채팅 — 3가지 개성을 가진 AI 캐릭터와 대화',
     'waveI.feature3': '일기 — 감정 스티커, 타임캡슐, 파도 배경',
     'waveI.feature4': '리포트 — 주간/월간 감정 통계와 AI 분석',
-    'waveI.cta': '시작하기',
+    'waveI.cta': 'Coming Soon',
     
     'grounded.slogan': '근거 위에, 답을 세우다.',
     'grounded.subSlogan': 'Stand on reason.',
