@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 // import { Waves, MessageCircle, BookOpen, BarChart3, FileQuestion, Scale, BookOpenCheck, RefreshCw, Clock, Sparkles, Bot, Heart } from 'lucide-react';
@@ -71,6 +72,7 @@ export function ServicesSection() {
           </div>
           
           <h3 className="text-[#1A2E40] mb-4">{t('waveI.title')}</h3>
+          
           <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
             {t('waveI.description')}
           </p>
@@ -160,7 +162,7 @@ export function ServicesSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-24 bg-gradient-to-br from-white to-[#FFF5F6] rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden"
         >
-          {/* 상단 로고/아이콘 영역 */}
+          {/* 상단 로고/아이콘 영역
           <div className="mb-6 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-2xl shadow-md">
@@ -178,16 +180,27 @@ export function ServicesSection() {
             <div className="hidden md:block text-xs text-gray-400">
               Seasonal Web Experience
             </div>
-          </div>
+          </div> */}
 
           {/* 타이틀 + 설명 */}
+          
           <div className="mb-8 space-y-3">
-            <h3 className="text-2xl md:text-3xl font-semibold text-[#1A2E40] leading-snug">
+            
+            <h3 className="text-3xl md:text-3xl font-semibold text-[#1A2E40] leading-snug">
               {t('christmas.title')}
             </h3>
-            <p className="text-[15px] md:text-base text-[#1A2E40]/80 leading-relaxed max-w-3xl">
-              {t('christmas.description')}
-            </p>
+            
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-semibold mb-1">
+            🎄  {t('christmas.badge')}
+                </div>
+            <div className="text-[15px] md:text-base text-[#1A2E40]/80 leading-relaxed max-w-xl">
+              {t('christmas.description').split('\n').map((line: string, i: number) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < t('christmas.description').split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
 
           {/* CTA 버튼 */}
@@ -195,7 +208,7 @@ export function ServicesSection() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="mb-10"
+            className="mb-16"
           >
             <motion.a
               href="https://christmas.wavetoai.com/"
@@ -203,38 +216,36 @@ export function ServicesSection() {
               rel="noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-3 px-10 py-3.5 bg-red-500 text-white rounded-full shadow-md hover:bg-red-600 transition-colors text-sm md:text-base font-semibold"
+              className="inline-flex items-center gap-3 py-4 bg-red-500 text-white rounded-full shadow-md hover:bg-red-600 transition-colors text-sm md:text-base font-semibold"
+              style={{ paddingLeft: '3rem', paddingRight: '3rem' }}
             >
               <span>🎁 {t('christmas.cta')}</span>
             </motion.a>
           </motion.div>
 
           {/* 1x3 하위 카드 */}
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-3">
           {christmasFeatures.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              className="flex items-start bg-white/90 rounded-2xl shadow-md hover:shadow-lg transition-shadow p-4 sm:p-5 flex flex-col items-center text-center h-full"
+              className="flex flex-col items-center text-center bg-white/90 rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5"
             >
-              {/* className="flex items-start space-x-3 bg-white/60 rounded-xl p-4" */}
               {/* 아이콘/이미지 영역 */}
               {feature.image ? (
-                // <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-slate-50 flex items-center justify-center overflow-hidden mb-3 sm:mb-4">
                 <img
                   src={feature.image}
                   alt={feature.title ?? feature.text}
-                  className="w-7 h-7 sm:w-4 sm:h-4 rounded-lg flex-shrink-0 object-cover mt-0.5"
+                  className="w-full sm:w-32 h-auto rounded-lg object-cover mb-4"
                 />
-                // </div>
               ) : feature.icon ? (
-                <feature.icon className="w-5 h-5 text-[#5A7A9E] flex-shrink-0 mt-1" />
+                <feature.icon className="w-12 h-12 text-red-400 mb-4" />
               ) : null}
 
               {/* 텍스트 영역 */}
-              <div className="text-[#1A2E40]/90 text-sm sm:text-[15px] leading-relaxed">
+              <div className="text-[#1A2E40] text-[20px] leading-relaxed font-medium">
                 {feature.text}
               </div>
             </motion.div>

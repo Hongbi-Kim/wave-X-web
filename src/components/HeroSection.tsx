@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
@@ -23,7 +24,12 @@ export function HeroSection({ setActiveTab }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="flex justify-center mb-8"
         >
-          <WaveXLogoFull size="large" animated={true} />
+          <div className="sm:hidden" style={{ transform: 'scale(0.85)' }}>
+            <WaveXLogoFull size="large" animated={true} />
+          </div>
+          <div className="hidden sm:block">
+            <WaveXLogoFull size="large" animated={true} />
+          </div>
         </motion.div>
 
         <motion.h1

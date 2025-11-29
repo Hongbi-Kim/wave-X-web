@@ -43,11 +43,11 @@ const translations = {
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': '당신의 파도를 따라 흘러가세요.',
     'waveI.title': 'Wave I — AI 심리 케어',
-    'waveI.description': '요즘 시대엔 몸의 건강만큼 마음의 건강도 중요합니다. Wave I는 당신의 감정이 자연스럽게 흐를 수 있도록 도와주는 AI 심리 케어 서비스입니다. AI 캐릭터와 함께 대화하고, 일기를 쓰고, 감정을 기록하며 조금씩 나를 돌아보세요. 마음의 파도를 따라, 당신 자신을 만나보세요.',
-    'waveI.feature1': 'Wave — 감정의 시각화와 인터랙션 (감정 정원, 감정 쓰레기통, 낙서장 등)',
+    'waveI.description': '몸의 건강만큼 마음의 건강도 중요합니다. Wave I는 당신의 감정이 자연스럽게 흐를 수 있도록 도와주는 AI 심리 케어 서비스입니다. AI 캐릭터와 함께 대화하고, 일기를 쓰고, 감정을 기록하며 조금씩 나를 돌아보세요.',
+    'waveI.feature1': 'Wave — 감정 정원, 감정 쓰레기통, 낙서장, 미션',
     'waveI.feature2': '채팅 — 3가지 개성을 가진 AI 캐릭터와 대화',
-    'waveI.feature3': '일기 — 감정 스티커, 타임캡슐, 파도 배경',
-    'waveI.feature4': '리포트 — 주간/월간 감정 통계와 AI 분석',
+    'waveI.feature3': '일기 — 감정 스티커, 감정 파도, 타임캡슐, 1일1답',
+    'waveI.feature4': '리포트 — 주간/월간 감정 통계와 AI 인사이트',
     'waveI.cta': 'Coming Soon',
     
     'grounded.slogan': '근거 위에, 답을 세우다.',
@@ -73,18 +73,18 @@ const translations = {
     'christmas.badge': '크리스마스 시즌 한정 테스트',
     'christmas.title': '직장인을 위한 연말 3종 테스트',
     'christmas.description':
-      '크리스마스 시즌, Wave X가 준비한 가벼운 이벤트성 테스트입니다. 회사식 크리스마스 운세, 산타 대신 받을 직장인 선물, 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 가볍게 웃을 수 있는 직장인용 연말 뽑기 서비스입니다.',
-    'christmas.cta': '  크리스마스 테스트 시작하기  ',
+      '크리스마스 시즌, Wave X가 준비한 가벼운 이벤트 테스트입니다.\n직장인 연말 운세, 산타가 주는 직장인 특별 선물, 내 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 결과를 확인하세요.',
+    'christmas.cta': '  테스트 시작하기  ',
 
     'christmas.card1.title': '회사식 크리스마스 운세',
     'christmas.feature1':
-      '올해 연말, 당신의 회사 생활은 어떨까요? 상사님의 기분부터 야근 운까지 모두 알려드립니다.',
+      '올해 연말, 나는 칼퇴 요정인가 야근 좀비인가? 회사에서 맞이할 엔딩을 확인하세요.',
     'christmas.card2.title': '산타 대신 받을 직장인 선물',
     'christmas.feature2':
-      '올해 당신이 받을 선물은? 상여금부터 조기퇴근권까지, 직장인 맞춤 선물을 확인하세요.',
+      '올해 당신이 받을 선물은? 직장인 맞춤 선물을 확인하세요.',
     'christmas.card3.title': '내 연말 잔업률 계산기',
     'christmas.feature3':
-      '연말에는 과연 몇 번이나 야근을 하게 될까요? 과학적(?)인 분석으로 예측해드립니다.',
+      '연말에는 야근 없는 일상을 보낼 수 있을까요? 과학적(?)인 분석으로 예측해드립니다.',
 
     
 
@@ -102,7 +102,7 @@ const translations = {
     'contact.title': "Let's Connect.",
     'contact.subtext': '협업하거나, 파트너십을 맺거나, 그냥 인사하세요.',
     'contact.cta1': 'Wave X에 연락하기',
-    'contact.email': 'Email: hello@wavex.ai',
+    'contact.email': 'Email: fromwave.x@gmail.com',
     
     // Footer
     'footer.copyright': '© 2025 Wave X — Designing AI that Flows.',
@@ -169,7 +169,7 @@ const translations = {
     'christmas.badge': 'Christmas Season Special Test',
     'christmas.title': 'Year-end Triple Test for Office Workers',
     'christmas.description':
-      'A light-weight event test for the Christmas season by Wave X. From company-style Christmas fortune, to gifts from “Santa” for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
+      'A light-weight event test for the Christmas season by Wave X.\nFrom company-style Christmas fortune, to gifts from "Santa" for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
     'christmas.cta': 'Go to Christmas Event',
 
     'christmas.card1.title': 'Company-style Christmas Fortune',
