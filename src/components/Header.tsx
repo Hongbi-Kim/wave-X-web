@@ -52,14 +52,20 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
           >
             {t('nav.philosophy')}
           </button>
-          <button 
-            onClick={() => handleTabClick('contact')} 
+          <button
+            onClick={() => handleTabClick('contact')}
             className={`transition-colors ${activeTab === 'contact' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.contact')}
           </button>
-          {/* <button 
-            onClick={() => handleTabClick('logos')} 
+          <button
+            onClick={() => handleTabClick('legal')}
+            className={`transition-colors ${activeTab === 'legal' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+          >
+            {t('nav.legal')}
+          </button>
+          {/* <button
+            onClick={() => handleTabClick('logos')}
             className={`transition-colors ${activeTab === 'logos' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             Logos
@@ -127,14 +133,20 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
             >
               {t('nav.philosophy')}
             </button>
-            <button 
-              onClick={() => handleTabClick('contact')} 
+            <button
+              onClick={() => handleTabClick('contact')}
               className={`transition-colors text-left ${activeTab === 'contact' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               {t('nav.contact')}
             </button>
-            <button 
-              onClick={() => handleTabClick('logos')} 
+            <button
+              onClick={() => handleTabClick('legal')}
+              className={`transition-colors text-left ${activeTab === 'legal' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            >
+              {t('nav.legal')}
+            </button>
+            <button
+              onClick={() => handleTabClick('logos')}
               className={`transition-colors text-left ${activeTab === 'logos' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               Logos

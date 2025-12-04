@@ -17,7 +17,8 @@ const translations = {
     'nav.philosophy': '철학',
     'nav.team': '팀',
     'nav.contact': 'Contact',
-    
+    'nav.legal': '약관 및 개인정보 보호',
+
     // Hero
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': '우리는 당신과 함께 흐르는 AI를 디자인합니다 — 차분하고, 직관적이며, 인간적인.',
@@ -106,6 +107,12 @@ const translations = {
     
     // Footer
     'footer.copyright': '© 2025 Wave X — Designing AI that Flows.',
+
+    // Legal
+    'legal.title': '약관 및 개인정보 보호',
+    'legal.subtitle': 'Wave X 서비스 이용약관 및 개인정보 처리방침',
+    'legal.terms.tab': '이용약관',
+    'legal.privacy.tab': '개인정보 처리방침',
   },
   en: {
     // Navigation
@@ -115,7 +122,8 @@ const translations = {
     'nav.philosophy': 'Philosophy',
     'nav.team': 'Team',
     'nav.contact': 'Contact',
-    
+    'nav.legal': 'Terms & Privacy',
+
     // Hero
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': 'We design AI that flows with you — calm, intuitive, and human.',
@@ -201,6 +209,12 @@ const translations = {
     
     // Footer
     'footer.copyright': '© 2025 Wave X — Designing AI that Flows.',
+
+    // Legal
+    'legal.title': 'Terms & Privacy',
+    'legal.subtitle': 'Wave X Terms of Service and Privacy Policy',
+    'legal.terms.tab': 'Terms of Service',
+    'legal.privacy.tab': 'Privacy Policy',
   },
 };
 

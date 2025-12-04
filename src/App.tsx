@@ -9,8 +9,9 @@ import { TeamSection } from './components/TeamSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { LogoDownloadPage } from './components/LogoDownloadPage';
+import { LegalSection } from './components/LegalSection';
 
-export type TabType = 'home' | 'about' | 'services' | 'philosophy' | 'team' | 'contact' | 'logos';
+export type TabType = 'home' | 'about' | 'services' | 'philosophy' | 'team' | 'contact' | 'logos' | 'legal';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('home');
@@ -26,6 +27,7 @@ export default function App() {
           {activeTab === 'philosophy' && <PhilosophySection />}
           {activeTab === 'contact' && <ContactSection />}
           {activeTab === 'logos' && <LogoDownloadPage />}
+          {activeTab === 'legal' && <LegalSection />}
         </main>
         <Footer />
       </div>
