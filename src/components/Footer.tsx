@@ -26,14 +26,14 @@ export function Footer() {
             >
             LinkedIn
             </a> */}
-            <a 
+            {/* <a 
               href="https://www.instagram.com/thewave.x_?igsh=ejNia3IwanVxaHpw&utm_source=qr" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
               >
               Instagram
-            </a>
+            </a> */}
             {/* <a href="#" className="text-white/70 hover:text-white transition-colors">
               GitHub
             </a> */}
