@@ -1,20 +1,17 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Menu, X } from 'lucide-react';
-import { TabType } from '../App';
 import { WaveXLogoFull } from './WaveXLogoFull';
 
-interface HeaderProps {
-  activeTab: TabType;
-  setActiveTab: (tab: TabType) => void;
-}
-
-export function Header({ activeTab, setActiveTab }: HeaderProps) {
+export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const handleTabClick = (tab: TabType) => {
-    setActiveTab(tab);
+  const isActive = (path: string) => location.pathname === path;
+
+  const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -22,54 +19,48 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <button onClick={() => handleTabClick('home')} className="flex items-center">
+        <Link to="/" className="flex items-center">
           <WaveXLogoFull size="small" animated={false} />
-        </button>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <button 
-            onClick={() => handleTabClick('home')} 
-            className={`transition-colors ${activeTab === 'home' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+          <Link
+            to="/"
+            className={`transition-colors ${isActive('/') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.home')}
-          </button>
-          <button 
-            onClick={() => handleTabClick('about')} 
-            className={`transition-colors ${activeTab === 'about' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+          </Link>
+          <Link
+            to="/about"
+            className={`transition-colors ${isActive('/about') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.about')}
-          </button>
-          <button 
-            onClick={() => handleTabClick('services')} 
-            className={`transition-colors ${activeTab === 'services' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+          </Link>
+          <Link
+            to="/services"
+            className={`transition-colors ${isActive('/services') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.services')}
-          </button>
-          <button 
-            onClick={() => handleTabClick('philosophy')} 
-            className={`transition-colors ${activeTab === 'philosophy' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+          </Link>
+          <Link
+            to="/philosophy"
+            className={`transition-colors ${isActive('/philosophy') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.philosophy')}
-          </button>
-          <button
-            onClick={() => handleTabClick('contact')}
-            className={`transition-colors ${activeTab === 'contact' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+          </Link>
+          <Link
+            to="/contact"
+            className={`transition-colors ${isActive('/contact') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.contact')}
-          </button>
-          <button
-            onClick={() => handleTabClick('legal')}
-            className={`transition-colors ${activeTab === 'legal' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+          </Link>
+          <Link
+            to="/legal"
+            className={`transition-colors ${isActive('/legal') || isActive('/terms') || isActive('/privacy') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.legal')}
-          </button>
-          {/* <button
-            onClick={() => handleTabClick('logos')}
-            className={`transition-colors ${activeTab === 'logos' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
-          >
-            Logos
-          </button> */}
+          </Link>
         </nav>
 
         {/* Language Toggle */}
@@ -109,48 +100,55 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="flex flex-col px-6 py-4 space-y-4">
-            <button 
-              onClick={() => handleTabClick('home')} 
-              className={`transition-colors text-left ${activeTab === 'home' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            <Link
+              to="/"
+              onClick={handleLinkClick}
+              className={`transition-colors text-left ${isActive('/') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               {t('nav.home')}
-            </button>
-            <button 
-              onClick={() => handleTabClick('about')} 
-              className={`transition-colors text-left ${activeTab === 'about' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            </Link>
+            <Link
+              to="/about"
+              onClick={handleLinkClick}
+              className={`transition-colors text-left ${isActive('/about') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               {t('nav.about')}
-            </button>
-            <button 
-              onClick={() => handleTabClick('services')} 
-              className={`transition-colors text-left ${activeTab === 'services' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            </Link>
+            <Link
+              to="/services"
+              onClick={handleLinkClick}
+              className={`transition-colors text-left ${isActive('/services') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               {t('nav.services')}
-            </button>
-            <button 
-              onClick={() => handleTabClick('philosophy')} 
-              className={`transition-colors text-left ${activeTab === 'philosophy' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            </Link>
+            <Link
+              to="/philosophy"
+              onClick={handleLinkClick}
+              className={`transition-colors text-left ${isActive('/philosophy') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               {t('nav.philosophy')}
-            </button>
-            <button
-              onClick={() => handleTabClick('contact')}
-              className={`transition-colors text-left ${activeTab === 'contact' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            </Link>
+            <Link
+              to="/contact"
+              onClick={handleLinkClick}
+              className={`transition-colors text-left ${isActive('/contact') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               {t('nav.contact')}
-            </button>
-            <button
-              onClick={() => handleTabClick('legal')}
-              className={`transition-colors text-left ${activeTab === 'legal' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            </Link>
+            <Link
+              to="/legal"
+              onClick={handleLinkClick}
+              className={`transition-colors text-left ${isActive('/legal') || isActive('/terms') || isActive('/privacy') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               {t('nav.legal')}
-            </button>
-            <button
-              onClick={() => handleTabClick('logos')}
-              className={`transition-colors text-left ${activeTab === 'logos' ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
+            </Link>
+            <Link
+              to="/logos"
+              onClick={handleLinkClick}
+              className={`transition-colors text-left ${isActive('/logos') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
             >
               Logos
-            </button>
+            </Link>
             <div className="flex items-center space-x-2 pt-4 border-t border-gray-200">
               <button
                 onClick={() => setLanguage('ko')}

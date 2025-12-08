@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
@@ -13,24 +13,33 @@ import { LegalSection } from './components/LegalSection';
 
 export type TabType = 'home' | 'about' | 'services' | 'philosophy' | 'team' | 'contact' | 'logos' | 'legal';
 
-export default function App() {
-  const [activeTab, setActiveTab] = useState<TabType>('home');
+function HomePage() {
+  return <HeroSection />;
+}
 
+export default function App() {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-white flex flex-col">
-        <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-        <main className="flex-1">
-          {activeTab === 'home' && <HeroSection setActiveTab={setActiveTab} />}
-          {activeTab === 'about' && <AboutSection />}
-          {activeTab === 'services' && <ServicesSection />}
-          {activeTab === 'philosophy' && <PhilosophySection />}
-          {activeTab === 'contact' && <ContactSection />}
-          {activeTab === 'logos' && <LogoDownloadPage />}
-          {activeTab === 'legal' && <LegalSection />}
-        </main>
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <BrowserRouter>
+      <LanguageProvider>
+        <div className="min-h-screen bg-white flex flex-col">
+          <Header />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutSection />} />
+              <Route path="/services" element={<ServicesSection />} />
+              <Route path="/philosophy" element={<PhilosophySection />} />
+              <Route path="/contact" element={<ContactSection />} />
+              <Route path="/logos" element={<LogoDownloadPage />} />
+              <Route path="/legal" element={<LegalSection />} />
+              <Route path="/terms" element={<LegalSection defaultTab="terms" />} />
+              <Route path="/privacy" element={<LegalSection defaultTab="privacy" />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }

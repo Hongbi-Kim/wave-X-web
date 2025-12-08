@@ -1,17 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
 import { WaveBackground } from './WaveBackground';
 import { WaveXLogoFull } from './WaveXLogoFull';
-import { TabType } from '../App';
 
-interface HeroSectionProps {
-  setActiveTab: (tab: TabType) => void;
-}
-
-export function HeroSection({ setActiveTab }: HeroSectionProps) {
+export function HeroSection() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8FAFB] via-[#E8EEF5] to-[#D8E4F0]">
@@ -57,20 +54,20 @@ export function HeroSection({ setActiveTab }: HeroSectionProps) {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button
-            onClick={() => setActiveTab('services')}
+            onClick={() => navigate('/services')}
             className="bg-[#1A2E40] hover:bg-[#8DA2D7] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             {t('hero.cta1')}
           </Button>
           <Button
-            onClick={() => setActiveTab('services')}
+            onClick={() => navigate('/services')}
             variant="outline"
             className="border-2 border-[#1A2E40] text-[#1A2E40] hover:bg-[#1A2E40] hover:text-white px-8 py-6 rounded-full transition-all duration-300"
           >
             {t('hero.cta2')}
           </Button>
           <Button
-            onClick={() => setActiveTab('services')}
+            onClick={() => navigate('/services')}
             variant="outline"
             className="border-2 border-[#FFD67D] text-[#C4A354] hover:bg-[#FFD67D] hover:text-[#1A2E40] px-8 py-6 rounded-full transition-all duration-300"
           >
