@@ -49,7 +49,7 @@ const translations = {
     'waveI.feature2': '채팅 — 3가지 개성을 가진 AI 캐릭터와 대화',
     'waveI.feature3': '일기 — 감정 스티커, 감정 파도, 타임캡슐, 1일1답',
     'waveI.feature4': '리포트 — 주간/월간 감정 통계와 AI 인사이트',
-    'waveI.cta': 'Coming Soon',
+    'waveI.cta': '시작하기',
     
     'grounded.slogan': '근거 위에, 답을 세우다.',
     'grounded.subSlogan': 'Stand on reason.',

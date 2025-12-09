@@ -87,8 +87,7 @@ export function ServicesSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                // 추후 Wave I 서비스 링크로 연결
-                console.log('Wave I 시작하기 클릭');
+                window.open('https://www.wavetoai.com/', '_blank');
               }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
