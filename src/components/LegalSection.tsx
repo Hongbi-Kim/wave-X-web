@@ -1,5 +1,5 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FileText, Shield } from 'lucide-react';
 
@@ -9,18 +9,20 @@ interface LegalSectionProps {
 
 export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
   const { t, language } = useLanguage();
-  const navigate = useNavigate();
   const location = useLocation();
+  const navigate = useNavigate();
 
   // URL에서 현재 활성 탭 결정
   const activeTab = location.pathname === '/privacy' ? 'privacy' : 'terms';
 
-  const handleTabChange = (value: string) => {
-    navigate(`/${value}`);
-  };
-
   console.log('Current pathname:', location.pathname);
   console.log('Active tab:', activeTab);
+
+  // 링크 클릭 핸들러 - 페이지 리로드 방지하고 React Router로 이동
+  const handleTabClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    navigate(path);
+  };
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6">
@@ -36,36 +38,45 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
         </div>
 
         {/* Tabs */}
-        <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger
-              value="terms"
-              className="flex items-center gap-2"
+        <div className="w-full">
+          <div className="grid w-full grid-cols-2 mb-8 bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-xl p-[3px]">
+            <a
+              href="https://home.wavetoai.com/terms"
+              onClick={(e) => handleTabClick(e, '/terms')}
+              className="flex items-center gap-2 h-[calc(100%-1px)] flex-1 justify-center rounded-xl px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50"
               style={activeTab === 'terms' ? {
                 border: '3px solid rgb(34, 197, 94)',
                 backgroundColor: 'rgb(220, 252, 231)',
-                fontWeight: 'bold'
-              } : {}}
+                fontWeight: 'bold',
+                color: '#1A2E40'
+              } : {
+                color: '#6B7280'
+              }}
             >
               <FileText className="w-4 h-4" />
               {t('legal.terms.tab')}
-            </TabsTrigger>
-            <TabsTrigger
-              value="privacy"
-              className="flex items-center gap-2"
+            </a>
+            <a
+              href="https://home.wavetoai.com/privacy"
+              onClick={(e) => handleTabClick(e, '/privacy')}
+              className="flex items-center gap-2 h-[calc(100%-1px)] flex-1 justify-center rounded-xl px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50"
               style={activeTab === 'privacy' ? {
                 border: '3px solid rgb(34, 197, 94)',
                 backgroundColor: 'rgb(220, 252, 231)',
-                fontWeight: 'bold'
-              } : {}}
+                fontWeight: 'bold',
+                color: '#1A2E40'
+              } : {
+                color: '#6B7280'
+              }}
             >
               <Shield className="w-4 h-4" />
               {t('legal.privacy.tab')}
-            </TabsTrigger>
-          </TabsList>
+            </a>
+          </div>
 
           {/* Terms of Service */}
-          <TabsContent value="terms" className="mt-0">
+          {activeTab === 'terms' && (
+            <div className="mt-0">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
               <div className="space-y-6 text-sm">
                 {language === 'ko' ? (
@@ -610,10 +621,12 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                 )}
               </div>
             </div>
-          </TabsContent>
+        </div>
+      )}
 
-          {/* Privacy Policy */}
-          <TabsContent value="privacy" className="mt-0">
+      {/* Privacy Policy */}
+      {activeTab === 'privacy' && (
+        <div className="mt-0">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
               <div className="space-y-6 text-sm">
                 {language === 'ko' ? (
@@ -1167,8 +1180,9 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                 )}
               </div>
             </div>
-          </TabsContent>
-        </Tabs>
+        </div>
+      )}
+        </div>
       </div>
     </div>
   );
