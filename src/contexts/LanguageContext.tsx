@@ -44,7 +44,7 @@ const translations = {
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': '당신의 파도를 따라 흘러가세요.',
     'waveI.title': 'Wave I — AI 심리 케어',
-    'waveI.description': '몸의 건강만큼 마음의 건강도 중요합니다. Wave I는 당신의 감정이 자연스럽게 흐를 수 있도록 도와주는 AI 심리 케어 서비스입니다. AI 캐릭터와 함께 대화하고, 일기를 쓰고, 감정을 기록하며 조금씩 나를 돌아보세요.',
+    'waveI.description': '몸의 건강만큼 마음의 건강도 중요합니다. Wave I는 당신의 감정이 자연스럽게 흐를 수 있도록 도와주는 AI 서비스입니다. AI 캐릭터와 함께 대화하고, 일기를 쓰고, 감정을 기록하며 조금씩 나를 돌아보세요.',
     'waveI.feature1': 'Wave — 감정 정원, 감정 쓰레기통, 낙서장, 미션',
     'waveI.feature2': '채팅 — 3가지 개성을 가진 AI 캐릭터와 대화',
     'waveI.feature3': '일기 — 감정 스티커, 감정 파도, 타임캡슐, 1일1답',
@@ -59,6 +59,7 @@ const translations = {
     'grounded.feature2': '명확한 해석 — 복잡한 법률 용어를 쉬운 말로',
     'grounded.feature3': '실무 적용 — 실제 사례와 판례 기반 답변',
     'grounded.feature4': '최신 법규 — 개정 내용 자동 반영',
+    'grounded.cta': 'Comming Soon',
     
     'todayis.slogan': '기록하지 않으면 하루는 사라진다.',
     'todayis.subSlogan': '오늘을 잊지 않기 위해, Today Is.',

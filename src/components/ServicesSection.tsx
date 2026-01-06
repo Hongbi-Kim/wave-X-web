@@ -137,7 +137,29 @@ export function ServicesSection() {
           <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
             {t('grounded.description')}
           </p>
-
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="mb-8"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              // onClick={() => {
+              //   window.open('https://www.wavetoai.com/', '_blank');
+              // }}
+              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
+              style={{
+                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+                fontWeight: 900,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {t('grounded.cta')}
+            </motion.button>
+          </motion.div>
           <div className="grid sm:grid-cols-2 gap-4">
             {groundedFeatures.map((feature, index) => (
               <motion.div
@@ -221,37 +243,6 @@ export function ServicesSection() {
               <span>🎁 {t('christmas.cta')}</span>
             </motion.a>
           </motion.div>
-
-          {/* 1x3 하위 카드 */}
-          <div className="grid grid-cols-3 gap-3">
-          {christmasFeatures.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              className="flex flex-col items-center text-center bg-white/90 rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5"
-            >
-              {/* 아이콘/이미지 영역 */}
-              {feature.image ? (
-                <img
-                  src={feature.image}
-                  alt={feature.title ?? feature.text}
-                  className="w-full sm:w-32 h-auto rounded-lg object-cover mb-4"
-                />
-              ) : feature.icon ? (
-                <feature.icon className="w-12 h-12 text-red-400 mb-4" />
-              ) : null}
-
-              {/* 텍스트 영역 */}
-              <div className="text-[#1A2E40] text-[20px] leading-relaxed font-medium">
-                {feature.text}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-
 
           {/* </div> */}
         </motion.div>
