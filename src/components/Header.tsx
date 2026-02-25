@@ -142,13 +142,6 @@ export function Header() {
             >
               {t('nav.legal')}
             </Link>
-            <Link
-              to="/logos"
-              onClick={handleLinkClick}
-              className={`transition-colors text-left ${isActive('/logos') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
-            >
-              Logos
-            </Link>
             <div className="flex items-center space-x-2 pt-4 border-t border-gray-200">
               <button
                 onClick={() => setLanguage('ko')}

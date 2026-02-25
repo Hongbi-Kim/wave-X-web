@@ -4,12 +4,11 @@ import { useLanguage } from '../contexts/LanguageContext';
 // import { Waves, MessageCircle, BookOpen, BarChart3, FileQuestion, Scale, BookOpenCheck, RefreshCw, Clock, Sparkles, Bot, Heart } from 'lucide-react';
 import { WaveLogoFull } from './WaveLogoFull';
 import { GroundedLogoFull } from './GroundedLogoFull';
-import { TodayIsLogoFull } from './TodayIsLogoFull';
 import {
   Waves, MessageCircle, BookOpen, BarChart3,
   FileQuestion, Scale, BookOpenCheck, RefreshCw,
-  Clock, Sparkles, Bot, Heart,
-  TreePine, Gift, PartyPopper, Snowflake,  // 추가
+  Sparkles, Heart,
+  TreePine, Gift, PartyPopper,
 } from 'lucide-react';
 
 export function ServicesSection() {
@@ -29,11 +28,11 @@ export function ServicesSection() {
     { icon: RefreshCw, text: t('grounded.feature4') },
   ];
 
-  const todayIsFeatures = [
-    { icon: Clock, text: t('todayis.feature1') },
-    { icon: Sparkles, text: t('todayis.feature2') },
-    { icon: Bot, text: t('todayis.feature3') },
-    { icon: Heart, text: t('todayis.feature4') },
+  const fortuneFeatures = [
+    { icon: MessageCircle, text: t('fortune.feature1') },
+    { icon: BarChart3, text: t('fortune.feature2') },
+    // { icon: Sparkles, text: t('fortune.feature3') },
+    // { icon: Heart, text: t('fortune.feature4') },
   ];
 
   const christmasFeatures = [
@@ -87,7 +86,7 @@ export function ServicesSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                window.open('https://www.wavetox.com/', '_blank');
+                window.open('https:/wavelog.wavetox.com/', '_blank');
               }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
@@ -170,6 +169,68 @@ export function ServicesSection() {
                 className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
               >
                 <feature.icon className="w-5 h-5 text-[#5A7A9E] flex-shrink-0 mt-1" />
+                <span className="text-[#1A2E40]/90">{feature.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Daily Fortune */}
+        <motion.div
+          id="daily-fortune"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mb-24 bg-gradient-to-br from-white to-[#FFF9ED] rounded-3xl p-8 md:p-12 shadow-xl"
+        >
+          <div className="mb-6">
+            <img
+              src="/images/haru_fortune_wordmark.svg"
+              alt="하루의 운세 로고"
+              className="h-14 md:h-16 w-auto object-contain"
+            />
+          </div>
+
+          <div className="mb-6">
+            <div className="text-[#C4A354] mb-2">{t('fortune.slogan')}</div>
+            <div className="text-[#C4A354]/80">{t('fortune.subSlogan')}</div>
+          </div>
+
+          <h3 className="text-[#1A2E40] mb-4">{t('fortune.title')}</h3>
+          <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
+            {t('fortune.description')}
+          </p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mb-8"
+          >
+            <motion.button
+              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200 opacity-85 cursor-not-allowed"
+              style={{
+                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+                fontWeight: 900,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}
+              disabled
+            >
+              {t('fortune.cta')}
+            </motion.button>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {fortuneFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
+                className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
+              >
+                <feature.icon className="w-5 h-5 text-[#D7B468] flex-shrink-0 mt-1" />
                 <span className="text-[#1A2E40]/90">{feature.text}</span>
               </motion.div>
             ))}

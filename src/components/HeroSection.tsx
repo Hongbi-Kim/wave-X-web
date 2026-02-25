@@ -67,7 +67,7 @@ export function HeroSection() {
             {t('hero.cta2')}
           </Button>
           <Button
-            onClick={() => navigate('/services')}
+            onClick={() => navigate('/services#daily-fortune')}
             variant="outline"
             className="border-2 border-[#FFD67D] text-[#C4A354] hover:bg-[#FFD67D] hover:text-[#1A2E40] px-8 py-6 rounded-full transition-all duration-300"
           >

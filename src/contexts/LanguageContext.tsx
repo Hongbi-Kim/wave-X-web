@@ -24,7 +24,7 @@ const translations = {
     'hero.subtext': '우리는 당신과 함께 흐르는 AI를 디자인합니다 — 차분하고, 직관적이며, 인간적인.',
     'hero.cta1': 'WAVE log 살펴보기',
     'hero.cta2': 'Grounded 살펴보기',
-    'hero.cta3': '시즌 한정 테스트 살펴보기',
+    'hero.cta3': '하루의 운세 살펴보기',
     // 'hero.cta3': 'TodayIs 살펴보기',
     
     // About
@@ -60,6 +60,16 @@ const translations = {
     'grounded.feature3': '실무 적용 — 실제 사례와 판례 기반 답변',
     'grounded.feature4': '최신 법규 — 개정 내용 자동 반영',
     'grounded.cta': 'Comming Soon',
+
+    'fortune.slogan': '고민에서 답으로, 오늘의 흐름을 읽다.',
+    'fortune.subSlogan': '하루와 운세를 AI와 함께.',
+    'fortune.title': '하루의 운세 — AI 운세 상담 & 맞춤 리포트',
+    'fortune.description': '하루의 운세는 증명된 사주 데이터를 기반으로 대화형 상담과 개인화된 사주 리포트를 제공해주는 서비스입니다. 궁금한 점을 모두 물어보세요!',
+    'fortune.feature1': '운세/사주 기반 AI 상담',
+    'fortune.feature2': '개인화된 맞춤 리포트 제공',
+    'fortune.feature3': '3가지 이용 방식 — 채팅, 질문 5개, 리포트 즉시 생성',
+    'fortune.feature4': '실행 중심 제안 — 오늘 바로 실천할 액션 가이드',
+    'fortune.cta': 'Coming Soon',
     
     'todayis.slogan': '기록하지 않으면 하루는 사라진다.',
     'todayis.subSlogan': '오늘을 잊지 않기 위해, Today Is.',
@@ -130,7 +140,7 @@ const translations = {
     'hero.subtext': 'We design AI that flows with you — calm, intuitive, and human.',
     'hero.cta1': 'Explore WAVE log',
     'hero.cta2': 'Explore Grounded',
-    'hero.cta3': 'Explore TodayIs',
+    'hero.cta3': 'Explore Daily Fortune',
     
     // About
     'about.title': 'About WAVE TO X',
@@ -164,6 +174,17 @@ const translations = {
     'grounded.feature2': 'Clear Interpretation — Complex legal terms in plain language',
     'grounded.feature3': 'Practical Application — Case-based answers with precedents',
     'grounded.feature4': 'Latest Regulations — Auto-updates with amendments',
+    'grounded.cta': 'Coming Soon',
+
+    'fortune.slogan': 'From concerns to clarity, read today\'s flow.',
+    'fortune.subSlogan': 'Daily fortune with AI guidance.',
+    'fortune.title': 'Daily Fortune — AI Consultation & Personalized Report',
+    'fortune.description': 'Built from wavei-solution, Daily Fortune connects conversational consultation to personalized reporting. Start with the mode you prefer: live chat, five guided questions, or instant report-only generation.',
+    'fortune.feature1': 'AI Consultation — Clarify today\'s concerns through dialogue',
+    'fortune.feature2': 'Personalized Report — Analysis based on your conversation/inputs',
+    'fortune.feature3': '3 Usage Modes — Chat, 5-question flow, report-only',
+    'fortune.feature4': 'Actionable Guidance — Practical next steps for today',
+    'fortune.cta': 'Coming Soon',
     
     'todayis.slogan': 'Remember Your Day.',
     'todayis.subSlogan': 'Today is yours to keep.',
