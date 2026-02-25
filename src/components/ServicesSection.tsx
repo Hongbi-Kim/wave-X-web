@@ -86,7 +86,7 @@ export function ServicesSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                window.open('https:/wavelog.wavetox.com/', '_blank');
+                window.open('https://wavelog.wavetox.com/', '_blank');
               }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
