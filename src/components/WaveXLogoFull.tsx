@@ -146,7 +146,7 @@ export function WaveXLogoFull({ size = 'medium', animated = false, inverted = fa
           lineHeight: 1,
         }}
       >
-        WAVE X
+        WAVE TO X
       </div>
     </Component>
   );

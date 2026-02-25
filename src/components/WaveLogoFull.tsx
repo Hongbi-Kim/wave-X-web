@@ -145,7 +145,7 @@ export function WaveLogoFull({ size = 'medium', animated = false }: WaveLogoFull
           transform: 'skew(-5deg)',
         }}
       >
-        wave I
+        WAVE log
       </div>
     </Component>
   );

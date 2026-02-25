@@ -22,14 +22,14 @@ const translations = {
     // Hero
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': '우리는 당신과 함께 흐르는 AI를 디자인합니다 — 차분하고, 직관적이며, 인간적인.',
-    'hero.cta1': 'Wave log 살펴보기',
+    'hero.cta1': 'WAVE log 살펴보기',
     'hero.cta2': 'Grounded 살펴보기',
     'hero.cta3': '시즌 한정 테스트 살펴보기',
     // 'hero.cta3': 'TodayIs 살펴보기',
     
     // About
-    'about.title': 'About Wave To X',
-    'about.description': 'Wave To X는 감정을 대체하는 것이 아니라, 이해하고 확장하는 AI를 만듭니다. 우리는 인간의 감정 리듬을 읽고 흐름으로 전환하는 기술을 설계합니다.',
+    'about.title': 'About WAVE TO X',
+    'about.description': 'WAVE TO X는 감정을 대체하는 것이 아니라, 이해하고 확장하는 AI를 만듭니다. 우리는 인간의 감정 리듬을 읽고 흐름으로 전환하는 기술을 설계합니다.',
     'about.value1.title': 'Flow',
     'about.value1.desc': '감정과 생각은 유동적입니다.',
     'about.value2.title': 'Balance',
@@ -43,8 +43,8 @@ const translations = {
     'services.title': '우리의 서비스',
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': '당신의 파도를 따라 흘러가세요.',
-    'waveI.title': 'Wave log — AI 심리 케어',
-    'waveI.description': '몸의 건강만큼 마음의 건강도 중요합니다. Wave I는 당신의 감정이 자연스럽게 흐를 수 있도록 도와주는 AI 서비스입니다. AI 캐릭터와 함께 대화하고, 일기를 쓰고, 감정을 기록하며 조금씩 나를 돌아보세요.',
+    'waveI.title': 'WAVE log — AI 심리 케어',
+    'waveI.description': '몸의 건강만큼 마음의 건강도 중요합니다. WAVE log는 당신의 감정이 자연스럽게 흐를 수 있도록 도와주는 AI 서비스입니다. AI 캐릭터와 함께 대화하고, 일기를 쓰고, 감정을 기록하며 조금씩 나를 돌아보세요.',
     'waveI.feature1': 'Wave — 감정 정원, 감정 쓰레기통, 낙서장, 미션',
     'waveI.feature2': '채팅 — 3가지 개성을 가진 AI 캐릭터와 대화',
     'waveI.feature3': '일기 — 감정 스티커, 감정 파도, 타임캡슐, 1일1답',
@@ -75,7 +75,7 @@ const translations = {
     'christmas.badge': '크리스마스 시즌 한정 테스트',
     'christmas.title': '직장인을 위한 연말 3종 테스트',
     'christmas.description':
-      '크리스마스 시즌, Wave X가 준비한 가벼운 이벤트 테스트입니다.\n직장인 연말 운세, 산타가 주는 직장인 특별 선물, 내 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 결과를 확인하세요.',
+      '크리스마스 시즌, WAVE TO X가 준비한 가벼운 이벤트 테스트입니다.\n직장인 연말 운세, 산타가 주는 직장인 특별 선물, 내 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 결과를 확인하세요.',
     'christmas.cta': '  테스트 시작하기  ',
 
     'christmas.card1.title': '회사식 크리스마스 운세',
@@ -103,15 +103,15 @@ const translations = {
     // Contact
     'contact.title': "Let's Connect.",
     'contact.subtext': '협업하거나, 파트너십을 맺거나, 그냥 인사하세요.',
-    'contact.cta1': 'Wave X에 연락하기',
+    'contact.cta1': 'WAVE TO X에 연락하기',
     'contact.email': 'Email: fromwave.x@gmail.com',
     
     // Footer
-    'footer.copyright': '© 2025 Wave X — Designing AI that Flows.',
+    'footer.copyright': '© 2026 WAVE TO X — Designing AI that Flows.',
 
     // Legal
     'legal.title': '약관 및 개인정보 보호',
-    'legal.subtitle': 'Wave X 서비스 이용약관 및 개인정보 처리방침',
+    'legal.subtitle': 'WAVE TO X 서비스 이용약관 및 개인정보 처리방침',
     'legal.terms.tab': '이용약관',
     'legal.privacy.tab': '개인정보 처리방침',
   },
@@ -128,13 +128,13 @@ const translations = {
     // Hero
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': 'We design AI that flows with you — calm, intuitive, and human.',
-    'hero.cta1': 'Explore Wave I',
+    'hero.cta1': 'Explore WAVE log',
     'hero.cta2': 'Explore Grounded',
     'hero.cta3': 'Explore TodayIs',
     
     // About
-    'about.title': 'About Wave To X',
-    'about.description': 'Wave To X uses AI not to replace emotion, but to understand and extend it. We design technology that reads the rhythm of human feelings and turns it into flow.',
+    'about.title': 'About WAVE TO X',
+    'about.description': 'WAVE TO X uses AI not to replace emotion, but to understand and extend it. We design technology that reads the rhythm of human feelings and turns it into flow.',
     'about.value1.title': 'Flow',
     'about.value1.desc': 'Emotions and thoughts are fluid.',
     'about.value2.title': 'Balance',
@@ -148,8 +148,8 @@ const translations = {
     'services.title': 'Our Services',
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': 'Flow with your feelings.',
-    'waveI.title': 'Wave log — AI Psychological Care',
-    'waveI.description': 'Mental health matters as much as physical health. Wave I is an AI psychological care service that helps your emotions flow naturally. Chat with AI characters, write in your diary, record your feelings, and gradually look inward. Follow the waves of your heart and meet yourself.',
+    'waveI.title': 'WAVE log — AI Psychological Care',
+    'waveI.description': 'Mental health matters as much as physical health. WAVE log is an AI psychological care service that helps your emotions flow naturally. Chat with AI characters, write in your diary, record your feelings, and gradually look inward. Follow the waves of your heart and meet yourself.',
     'waveI.feature1': 'Wave — Emotion visualization & interaction (emotion garden, emotion bin, doodle, etc.)',
     'waveI.feature2': 'Chat — Conversations with 3 AI characters with unique personalities',
     'waveI.feature3': 'Diary — Emotion stickers, time capsule, wave backgrounds',
@@ -178,7 +178,7 @@ const translations = {
     'christmas.badge': 'Christmas Season Special Test',
     'christmas.title': 'Year-end Triple Test for Office Workers',
     'christmas.description':
-      'A light-weight event test for the Christmas season by Wave X.\nFrom company-style Christmas fortune, to gifts from "Santa" for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
+      'A light-weight event test for the Christmas season by WAVE TO X.\nFrom company-style Christmas fortune, to gifts from "Santa" for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
     'christmas.cta': 'Go to Christmas Event',
 
     'christmas.card1.title': 'Company-style Christmas Fortune',
@@ -205,15 +205,15 @@ const translations = {
     // Contact
     'contact.title': "Let's Connect.",
     'contact.subtext': 'Collaborate, partner, or just say hello.',
-    'contact.cta1': 'Contact Wave To X',
-    'contact.email': 'Email: hello@wavex.ai',
+    'contact.cta1': 'Contact WAVE TO X',
+    'contact.email': 'Email: fromwave.x@gmail.com',
     
     // Footer
-    'footer.copyright': '© 2026 Wave To X — Designing AI that Flows.',
+    'footer.copyright': '© 2026 WAVE TO X — Designing AI that Flows.',
 
     // Legal
     'legal.title': 'Terms & Privacy',
-    'legal.subtitle': 'Wave To X Terms of Service and Privacy Policy',
+    'legal.subtitle': 'WAVE TO X Terms of Service and Privacy Policy',
     'legal.terms.tab': 'Terms of Service',
     'legal.privacy.tab': 'Privacy Policy',
   },
