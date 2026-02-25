@@ -87,7 +87,7 @@ export function ServicesSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                window.open('https://www.wavetoai.com/', '_blank');
+                window.open('https://www.wavetox.com/', '_blank');
               }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
@@ -147,7 +147,7 @@ export function ServicesSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               // onClick={() => {
-              //   window.open('https://www.wavetoai.com/', '_blank');
+              //   window.open('https://www.wavetox.com/', '_blank');
               // }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
@@ -232,7 +232,7 @@ export function ServicesSection() {
             className="mb-16"
           >
             <motion.a
-              href="https://christmas.wavetoai.com/"
+              href="https://christmas.wavetox.com/"
               target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.05 }}

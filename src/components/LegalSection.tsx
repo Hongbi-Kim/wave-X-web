@@ -41,7 +41,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
         <div className="w-full">
           <div className="grid w-full grid-cols-2 mb-8 bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-xl p-[3px]">
             <a
-              href="https://home.wavetoai.com/terms"
+              href="https://home.wavetox.com/terms"
               onClick={(e) => handleTabClick(e, '/terms')}
               className="flex items-center gap-2 h-[calc(100%-1px)] flex-1 justify-center rounded-xl px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50"
               style={activeTab === 'terms' ? {
@@ -57,7 +57,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
               {t('legal.terms.tab')}
             </a>
             <a
-              href="https://home.wavetoai.com/privacy"
+              href="https://home.wavetox.com/privacy"
               onClick={(e) => handleTabClick(e, '/privacy')}
               className="flex items-center gap-2 h-[calc(100%-1px)] flex-1 justify-center rounded-xl px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50"
               style={activeTab === 'privacy' ? {
