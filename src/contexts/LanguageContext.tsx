@@ -85,7 +85,7 @@ const translations = {
     'christmas.badge': '크리스마스 시즌 한정 테스트',
     'christmas.title': '직장인을 위한 연말 3종 테스트',
     'christmas.description':
-      '크리스마스 시즌, WAVE TO X가 준비한 가벼운 이벤트 테스트입니다.\n직장인 연말 운세, 산타가 주는 직장인 특별 선물, 내 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 결과를 확인하세요.',
+      '크리스마스 시즌, WAVE TO X가 준비한 가벼운 이벤트 테스트입니다.\n직장인 연말, 산타가 주는 직장인 특별 선물, 내 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 결과를 확인하세요.',
     'christmas.cta': '  테스트 시작하기  ',
 
     'christmas.card1.title': '회사식 크리스마스 운세',

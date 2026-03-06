@@ -176,7 +176,7 @@ export function ServicesSection() {
         </motion.div>
 
         {/* Daily Fortune */}
-        <motion.div
+        {/* <motion.div
           id="daily-fortune"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ export function ServicesSection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Christmas Event */}
         <motion.div
