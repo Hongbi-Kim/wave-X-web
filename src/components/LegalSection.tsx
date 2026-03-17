@@ -139,7 +139,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                       <h3 className="font-semibold text-base mb-2">제5조 (서비스의 제공)</h3>
                       <div className="text-gray-700 leading-relaxed space-y-1">
                         <p>1. 회사는 다음과 같은 서비스를 제공합니다.</p>
-                        <p className="pl-4">- AI 캐릭터(루미, 카이, 레오, 리브 등)와의 대화 서비스</p>
+                        <p className="pl-4">- AI 캐릭터(루미, 카이, 리브 등)와의 대화 서비스</p>
                         <p className="pl-4">- 감정 일기 및 타임캡슐 작성·보관 서비스</p>
                         <p className="pl-4">- 감정 분석 및 주간·월간 리포트 제공 서비스</p>
                         <p className="pl-4">- 감정 정원, 감정 파도 등 감정 시각화 서비스</p>

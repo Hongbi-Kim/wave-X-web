@@ -199,10 +199,10 @@ const translations = {
     'christmas.badge': 'Christmas Season Special Test',
     'christmas.title': 'Year-end Triple Test for Office Workers',
     'christmas.description':
-      'A light-weight event test for the Christmas season by WAVE TO X.\nFrom company-style Christmas fortune, to gifts from "Santa" for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
+      'A light-weight event test for the Christmas season by WAVE TO X.\nFrom company-style Christmas event, to gifts from "Santa" for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
     'christmas.cta': 'Go to Christmas Event',
 
-    'christmas.card1.title': 'Company-style Christmas Fortune',
+    'christmas.card1.title': 'Company-style Christmas Event',
     'christmas.feature1':
       'What will your office life look like this year-end? From your boss’s mood to your overtime luck.',
     'christmas.card2.title': 'Gift from Santa for Office Workers',
