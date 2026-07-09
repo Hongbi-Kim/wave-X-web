@@ -55,12 +55,12 @@ export function Header() {
           >
             {t('nav.contact')}
           </Link>
-          <Link
+          {/* <Link
             to="/legal"
             className={`transition-colors ${isActive('/legal') || isActive('/terms') || isActive('/privacy') ? 'text-[#8DA2D7]' : 'text-[#1A2E40] hover:text-[#8DA2D7]'}`}
           >
             {t('nav.legal')}
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Language Toggle */}

@@ -54,6 +54,12 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button
+            onClick={() => window.open('https://pomopet.wavetox.com/', '_blank')}
+            className="bg-[#E8563A] hover:bg-[#C9432A] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            🐾 {t('hero.cta0')}
+          </Button>
+          <Button
             onClick={() => navigate('/services')}
             className="bg-[#1A2E40] hover:bg-[#8DA2D7] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >

@@ -9,10 +9,18 @@ import {
   FileQuestion, Scale, BookOpenCheck, RefreshCw,
   Sparkles, Heart,
   TreePine, Gift, PartyPopper,
+  Clock, Smile, Shield,
 } from 'lucide-react';
 
 export function ServicesSection() {
   const { t } = useLanguage();
+
+  const pomopetFeatures = [
+    { icon: Clock, text: t('pomopet.feature1') },
+    { icon: Smile, text: t('pomopet.feature2') },
+    { icon: BarChart3, text: t('pomopet.feature3') },
+    { icon: Shield, text: t('pomopet.feature4') },
+  ];
 
   const waveIFeatures = [
     { icon: Waves, text: t('waveI.feature1') },
@@ -54,6 +62,71 @@ export function ServicesSection() {
           <h2 className="text-[#1A2E40]">{t('services.title')}</h2>
         </motion.div>
 
+        {/* PomoPet */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-24 bg-gradient-to-br from-white to-[#FFF0ED] rounded-3xl p-8 md:p-12 shadow-xl"
+        >
+          <div className="mb-3 flex items-center gap-4">
+            <img
+              src="/images/pomopet_icon.png"
+              alt="PomoPet icon"
+              style={{ width: 50, height: 50, flexShrink: 0, objectFit: 'cover', borderRadius: 12 }}
+            />
+            <div>
+            </div>
+          </div>
+
+          <div className="mb-6">
+            <div className="text-[#E8563A] mb-2">{t('pomopet.slogan')}</div>
+            <div className="text-[#E8563A]/80">{t('pomopet.subSlogan')}</div>
+          </div>
+
+          <h3 className="text-[#1A2E40] mb-4">{t('pomopet.title')}</h3>
+          <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
+            {t('pomopet.description')}
+          </p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="mb-8"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://pomopet.wavetox.com/', '_blank')}
+              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
+              style={{
+                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+                fontWeight: 900,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}
+            >
+              🐾 {t('pomopet.cta')}
+            </motion.button>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {pomopetFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
+              >
+                <feature.icon className="w-5 h-5 text-[#E8563A] flex-shrink-0 mt-1" />
+                <span className="text-[#1A2E40]/90">{feature.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Wave I */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -62,7 +135,7 @@ export function ServicesSection() {
           className="mb-24 bg-gradient-to-br from-white to-[#E3F2FD] rounded-3xl p-8 md:p-12 shadow-xl"
         >
           <div className="mb-6">
-            <WaveLogoFull size="medium" animated={true} />
+            <WaveLogoFull size="small" animated={true} />
           </div>
           
           <div className="mb-6">
@@ -124,7 +197,7 @@ export function ServicesSection() {
           className="mb-24 bg-gradient-to-br from-white to-[#E8EBF0] rounded-3xl p-8 md:p-12 shadow-xl"
         >
           <div className="mb-6">
-            <GroundedLogoFull size="medium" animated={true} showTagline={false} />
+            <GroundedLogoFull size="small" animated={true} showTagline={false} />
           </div>
           
           <div className="mb-6">
@@ -145,9 +218,9 @@ export function ServicesSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              // onClick={() => {
-              //   window.open('https://www.wavetox.com/', '_blank');
-              // }}
+              onClick={() => {
+                window.open('https://grounded.wavetox.com/', '_blank');
+              }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
                 fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',

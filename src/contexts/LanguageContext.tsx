@@ -22,6 +22,7 @@ const translations = {
     // Hero
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': '우리는 당신과 함께 흐르는 AI를 디자인합니다 — 차분하고, 직관적이며, 인간적인.',
+    'hero.cta0': 'PomoPet 시작하기',
     'hero.cta1': 'WAVE log 살펴보기',
     'hero.cta2': 'Grounded 살펴보기',
     'hero.cta3': '하루의 운세 살펴보기',
@@ -41,6 +42,19 @@ const translations = {
     
     // Services
     'services.title': '우리의 서비스',
+
+    // PomoPet
+    'pomopet.slogan': '집중할 땐, 귀여운 친구와 함께.',
+    'pomopet.subSlogan': 'Focus with your tiny companion.',
+    'pomopet.title': 'PomoPet — 데스크탑 펫 집중 타이머',
+    'pomopet.description': '귀여운 캐릭터 펫이 데스크탑 위에 상주하며 뽀모도로 타이머로 집중 시간을 함께 기록합니다. 무무, 핑구, 트리버와 함께 더 즐겁게 집중하세요. 회원가입도 인터넷도 필요 없이, 모든 데이터는 내 PC에만 저장됩니다.',
+    'pomopet.feature1': '뽀모도로·타이머·스톱워치 모드',
+    'pomopet.feature2': '귀여운 캐릭터 펫 — 무무, 핑구, 트리버',
+    'pomopet.feature3': '통계 대시보드 & 주간 집중 기록',
+    'pomopet.feature4': '100% 로컬 — 회원가입·인터넷 불필요',
+    'pomopet.cta': '시작하기',
+    'pomopet.badge': 'macOS 데스크탑 앱',
+
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': '당신의 파도를 따라 흘러가세요.',
     'waveI.title': 'WAVE log — AI 심리 케어',
@@ -59,7 +73,7 @@ const translations = {
     'grounded.feature2': '명확한 해석 — 복잡한 법률 용어를 쉬운 말로',
     'grounded.feature3': '실무 적용 — 실제 사례와 판례 기반 답변',
     'grounded.feature4': '최신 법규 — 개정 내용 자동 반영',
-    'grounded.cta': 'Comming Soon',
+    'grounded.cta': '베타서비스 시작하기',
 
     'fortune.slogan': '고민에서 답으로, 오늘의 흐름을 읽다.',
     'fortune.subSlogan': '하루와 운세를 AI와 함께.',
@@ -138,6 +152,7 @@ const translations = {
     // Hero
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': 'We design AI that flows with you — calm, intuitive, and human.',
+    'hero.cta0': 'Get Started with PomoPet',
     'hero.cta1': 'Explore WAVE log',
     'hero.cta2': 'Explore Grounded',
     'hero.cta3': 'Explore Daily Fortune',
@@ -156,6 +171,19 @@ const translations = {
     
     // Services
     'services.title': 'Our Services',
+
+    // PomoPet
+    'pomopet.slogan': 'Focus with your tiny companion.',
+    'pomopet.subSlogan': 'A cute pet lives on your desktop.',
+    'pomopet.title': 'PomoPet — Desktop Pet Focus Timer',
+    'pomopet.description': 'Cute character pets live on your desktop and track your focus time with a Pomodoro timer. Mumu, Pingu, and Triver are here to make your focus sessions more fun. No sign-up, no internet — all data stays on your PC.',
+    'pomopet.feature1': 'Pomodoro, Timer & Stopwatch modes',
+    'pomopet.feature2': 'Cute character pets — Mumu, Pingu, Triver',
+    'pomopet.feature3': 'Stats dashboard & weekly focus history',
+    'pomopet.feature4': '100% Local — no sign-up, no internet',
+    'pomopet.cta': 'Get Started',
+    'pomopet.badge': 'macOS Desktop App',
+
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': 'Flow with your feelings.',
     'waveI.title': 'WAVE log — AI Psychological Care',
