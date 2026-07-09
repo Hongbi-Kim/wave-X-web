@@ -23,6 +23,7 @@ const translations = {
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': '우리는 당신과 함께 흐르는 AI를 디자인합니다 — 차분하고, 직관적이며, 인간적인.',
     'hero.cta0': 'PomoPet 시작하기',
+    'hero.cta4': 'LuckyDream 시작하기',
     'hero.cta1': 'WAVE log 살펴보기',
     'hero.cta2': 'Grounded 살펴보기',
     'hero.cta3': '하루의 운세 살펴보기',
@@ -54,6 +55,18 @@ const translations = {
     'pomopet.feature4': '100% 로컬 — 회원가입·인터넷 불필요',
     'pomopet.cta': '시작하기',
     'pomopet.badge': 'macOS 데스크탑 앱',
+
+    // LuckyDream
+    'luckydream.slogan': '꿈의 요정이 전하는 신비로운 메시지를 받아보세요',
+    'luckydream.subSlogan': 'Your dream, decoded by Dream Fairy.',
+    'luckydream.title': '럭키드림 — AI 꿈 해몽',
+    'luckydream.description': '꿈의 요정이 당신의 꿈을 해석하고, 당신의 궁금함에 대해 자세히 설명해드려요.',
+    'luckydream.feature1': 'AI 꿈 해몽',
+    'luckydream.feature2': '궁금한 점 질문 — 꿈과 연결된 맞춤 답변',
+    'luckydream.feature3': '꿈과 연결된 행운의 아이템',
+    'luckydream.feature4': '꿈의 요정이 전하는 꿈 카드',
+    'luckydream.cta': '시작하기',
+    'luckydream.badge': 'AI 웹 서비스',
 
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': '당신의 파도를 따라 흘러가세요.',
@@ -153,6 +166,7 @@ const translations = {
     'hero.slogan': 'Where Human Waves Meet AI.',
     'hero.subtext': 'We design AI that flows with you — calm, intuitive, and human.',
     'hero.cta0': 'Get Started with PomoPet',
+    'hero.cta4': 'Try LuckyDream',
     'hero.cta1': 'Explore WAVE log',
     'hero.cta2': 'Explore Grounded',
     'hero.cta3': 'Explore Daily Fortune',
@@ -183,6 +197,18 @@ const translations = {
     'pomopet.feature4': '100% Local — no sign-up, no internet',
     'pomopet.cta': 'Get Started',
     'pomopet.badge': 'macOS Desktop App',
+
+    // LuckyDream
+    'luckydream.slogan': 'Receive a mysterious message from the Dream Fairy.',
+    'luckydream.subSlogan': 'Your dream, decoded by Dream Fairy.',
+    'luckydream.title': 'LuckyDream — AI Dream Interpretation',
+    'luckydream.description': 'The Dream Fairy interprets your dream and explains the answers to your questions in detail.',
+    'luckydream.feature1': 'AI Dream Interpretation',
+    'luckydream.feature2': 'Ask a Question — personalized answers linked to your dream',
+    'luckydream.feature3': 'Lucky items connected to your dream',
+    'luckydream.feature4': 'A dream card delivered by the Dream Fairy',
+    'luckydream.cta': 'Get Started',
+    'luckydream.badge': 'AI Web Service',
 
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': 'Flow with your feelings.',

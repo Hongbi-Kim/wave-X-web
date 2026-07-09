@@ -55,11 +55,17 @@ export function HeroSection() {
         >
           <Button
             onClick={() => window.open('https://pomopet.wavetox.com/', '_blank')}
-            className="bg-[#E8563A] hover:bg-[#C9432A] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             🐾 {t('hero.cta0')}
           </Button>
           <Button
+            onClick={() => window.open('https://luckydream.wavetox.com/', '_blank')}
+            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            🌙 {t('hero.cta4')}
+          </Button>
+          {/* <Button
             onClick={() => navigate('/services')}
             className="bg-[#1A2E40] hover:bg-[#8DA2D7] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
@@ -71,7 +77,7 @@ export function HeroSection() {
             className="border-2 border-[#1A2E40] text-[#1A2E40] hover:bg-[#1A2E40] hover:text-white px-8 py-6 rounded-full transition-all duration-300"
           >
             {t('hero.cta2')}
-          </Button>
+          </Button> */}
           {/* <Button
             onClick={() => navigate('/services#daily-fortune')}
             variant="outline"
