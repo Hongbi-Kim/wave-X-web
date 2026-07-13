@@ -20,7 +20,7 @@ const translations = {
     'nav.legal': '약관 및 개인정보 보호',
 
     // Hero
-    'hero.slogan': 'Where Human Waves Meet AI.',
+    'hero.slogan': 'AI의 새로운 물결로, 더 나은 삶의 시대를 엽니다.',
     'hero.subtext': '우리는 당신과 함께 흐르는 AI를 디자인합니다 — 차분하고, 직관적이며, 인간적인.',
     'hero.cta0': 'PomoPet 시작하기',
     'hero.cta4': 'LuckyDream 시작하기',
@@ -30,8 +30,8 @@ const translations = {
     // 'hero.cta3': 'TodayIs 살펴보기',
     
     // About
-    'about.title': 'About WAVE TO X',
-    'about.description': 'WAVE TO X는 감정을 대체하는 것이 아니라, 이해하고 확장하는 AI를 만듭니다. 우리는 인간의 감정 리듬을 읽고 흐름으로 전환하는 기술을 설계합니다.',
+    'about.title': 'About WAVERA',
+    'about.description': '웨이베라(WAVERA)는 AI의 새로운 물결로 사람들을 더 나은 삶으로 이끌고, 더 나은 시대를 엽니다.',
     'about.value1.title': 'Flow',
     'about.value1.desc': '감정과 생각은 유동적입니다.',
     'about.value2.title': 'Balance',
@@ -112,7 +112,7 @@ const translations = {
     'christmas.badge': '크리스마스 시즌 한정 테스트',
     'christmas.title': '직장인을 위한 연말 3종 테스트',
     'christmas.description':
-      '크리스마스 시즌, WAVE TO X가 준비한 가벼운 이벤트 테스트입니다.\n직장인 연말, 산타가 주는 직장인 특별 선물, 내 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 결과를 확인하세요.',
+      '크리스마스 시즌, WAVERA가 준비한 가벼운 이벤트 테스트입니다.\n직장인 연말, 산타가 주는 직장인 특별 선물, 내 연말 잔업률 계산기까지 — 동료들과 링크를 공유하고 결과를 확인하세요.',
     'christmas.cta': '  테스트 시작하기  ',
 
     'christmas.card1.title': '회사식 크리스마스 운세',
@@ -140,15 +140,15 @@ const translations = {
     // Contact
     'contact.title': "Let's Connect.",
     'contact.subtext': '협업하거나, 파트너십을 맺거나, 그냥 인사하세요.',
-    'contact.cta1': 'WAVE TO X에 연락하기',
+    'contact.cta1': 'WAVERA에 연락하기',
     'contact.email': 'Email: fromwave.x@gmail.com',
     
     // Footer
-    'footer.copyright': '© 2026 WAVE TO X — Designing AI that Flows.',
+    'footer.copyright': '© 2026 WAVERA — Designing AI that Flows.',
 
     // Legal
     'legal.title': '약관 및 개인정보 보호',
-    'legal.subtitle': 'WAVE TO X 서비스 이용약관 및 개인정보 처리방침',
+    'legal.subtitle': 'WAVERA 서비스 이용약관 및 개인정보 처리방침',
     'legal.terms.tab': '이용약관',
     'legal.privacy.tab': '개인정보 처리방침',
   },
@@ -163,7 +163,7 @@ const translations = {
     'nav.legal': 'Terms & Privacy',
 
     // Hero
-    'hero.slogan': 'Where Human Waves Meet AI.',
+    'hero.slogan': 'Opening a better era of life with a new wave of AI.',
     'hero.subtext': 'We design AI that flows with you — calm, intuitive, and human.',
     'hero.cta0': 'Get Started with PomoPet',
     'hero.cta4': 'Try LuckyDream',
@@ -172,8 +172,8 @@ const translations = {
     'hero.cta3': 'Explore Daily Fortune',
     
     // About
-    'about.title': 'About WAVE TO X',
-    'about.description': 'WAVE TO X uses AI not to replace emotion, but to understand and extend it. We design technology that reads the rhythm of human feelings and turns it into flow.',
+    'about.title': 'About WAVERA',
+    'about.description': 'WAVERA creates a new wave with AI, guiding everyday life toward a better era.',
     'about.value1.title': 'Flow',
     'about.value1.desc': 'Emotions and thoughts are fluid.',
     'about.value2.title': 'Balance',
@@ -253,7 +253,7 @@ const translations = {
     'christmas.badge': 'Christmas Season Special Test',
     'christmas.title': 'Year-end Triple Test for Office Workers',
     'christmas.description':
-      'A light-weight event test for the Christmas season by WAVE TO X.\nFrom company-style Christmas event, to gifts from "Santa" for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
+      'A light-weight event test for the Christmas season by WAVERA.\nFrom company-style Christmas event, to gifts from "Santa" for office workers, to an end-of-year overtime calculator — a shareable mini-site for colleagues to laugh over together.',
     'christmas.cta': 'Go to Christmas Event',
 
     'christmas.card1.title': 'Company-style Christmas Event',
@@ -280,15 +280,15 @@ const translations = {
     // Contact
     'contact.title': "Let's Connect.",
     'contact.subtext': 'Collaborate, partner, or just say hello.',
-    'contact.cta1': 'Contact WAVE TO X',
+    'contact.cta1': 'Contact WAVERA',
     'contact.email': 'Email: fromwave.x@gmail.com',
     
     // Footer
-    'footer.copyright': '© 2026 WAVE TO X — Designing AI that Flows.',
+    'footer.copyright': '© 2026 WAVERA — Designing AI that Flows.',
 
     // Legal
     'legal.title': 'Terms & Privacy',
-    'legal.subtitle': 'WAVE TO X Terms of Service and Privacy Policy',
+    'legal.subtitle': 'WAVERA Terms of Service and Privacy Policy',
     'legal.terms.tab': 'Terms of Service',
     'legal.privacy.tab': 'Privacy Policy',
   },

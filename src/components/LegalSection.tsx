@@ -84,7 +84,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                     <section>
                       <h3 className="font-semibold text-base mb-2">제1조 (목적)</h3>
                       <p className="text-gray-700 leading-relaxed">
-                        본 약관은 WAVE TO X(이하 "회사")가 제공하는 WAVE log(웨이브로그, 이하 "서비스")의
+                        본 약관은 WAVERA(이하 "회사")가 제공하는 WAVE log(웨이브로그, 이하 "서비스")의
                         이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을
                         규정함을 목적으로 합니다.
                       </p>
@@ -215,7 +215,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                       <div className="text-gray-700 leading-relaxed space-y-1">
                         <p>1. 서비스는 외부 AI API(예: 대형 언어 모델 API)를 활용하여 답변과 분석 결과를 제공합니다. AI의 특성상 항상 정확하거나 완전하지 않을 수 있으며, 오류·편향이 포함될 수 있습니다.</p>
                         <p>2. AI 캐릭터가 제공하는 답변 및 리포트는 참고용 정보이며, 정신건강의학과 진단, 치료, 응급상황 대응, 법률·재무 자문 등을 대체하지 않습니다.</p>
-                        <p>3. 회사는 이용자의 대화 및 일기 데이터를 WAVE TO X 자체 모델 학습 목적으로 사용하지 않습니다. 다만, 외부 AI API 제공자의 정책에 따라 일부 데이터가 해당 제공자의 모델 품질 개선 목적으로 활용될 수 있으며, 이 경우 각 제공자의 약관과 개인정보 처리방침이 함께 적용됩니다.</p>
+                        <p>3. 회사는 이용자의 대화 및 일기 데이터를 WAVERA 자체 모델 학습 목적으로 사용하지 않습니다. 다만, 외부 AI API 제공자의 정책에 따라 일부 데이터가 해당 제공자의 모델 품질 개선 목적으로 활용될 수 있으며, 이 경우 각 제공자의 약관과 개인정보 처리방침이 함께 적용됩니다.</p>
                       </div>
                     </section>
 
@@ -265,7 +265,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                       <h3 className="font-semibold text-base mb-2">Article 1 (Purpose)</h3>
                       <p className="text-gray-700 leading-relaxed">
                         These Terms of Service (“Terms”) set forth the rights, obligations and
-                        responsibilities between WAVE TO X (the “Company”) and users in connection
+                        responsibilities between WAVERA (the “Company”) and users in connection
                         with the use of the WAVE log (“Service”) provided by the Company, as well as
                         other necessary matters.
                       </p>
@@ -530,7 +530,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                         </p>
                         <p>
                           3. The Company does not use Users&apos; conversations or diary data to
-                          train WAVE TO X&apos;s own AI models. However, depending on the policies of
+                          train WAVERA&apos;s own AI models. However, depending on the policies of
                           external AI API providers, some data may be used by such providers to
                           improve their models. In such cases, the terms of use and privacy
                           policies of each provider will also apply.
@@ -636,7 +636,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                       <h3 className="font-semibold text-base mb-2">1. 개인정보 처리방침의 목적</h3>
                       <div className="text-gray-700 leading-relaxed space-y-1">
                         <p>
-                          WAVE TO X(이하 "회사")는 WAVE log(웨이브로그, 이하 "서비스")를 제공함에 있어
+                          WAVERA(이하 "회사")는 WAVE log(웨이브로그, 이하 "서비스")를 제공함에 있어
                           이용자의 개인정보를 소중하게 보호합니다. 본 개인정보 처리방침은 회사가
                           어떤 정보를 수집하고, 어떻게 이용·보관·파기하는지, 그리고 이용자가
                           자신의 개인정보에 대하여 어떤 권리를 행사할 수 있는지를 설명합니다.
@@ -707,7 +707,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                         <p className="pl-4">- 계정 도용·이상 행위 탐지, 스팸·악용 방지 등 보안 및 이용자 보호</p>
 
                         <p className="pt-2 pl-4">
-                          회사는 수집한 데이터를 WAVE TO X 자체 모델 학습(사내 AI 모델 훈련) 목적으로 사용하지 않습니다.
+                          회사는 수집한 데이터를 WAVERA 자체 모델 학습(사내 AI 모델 훈련) 목적으로 사용하지 않습니다.
                           다만, AI 응답 생성을 위해 연동된 외부 AI API 제공자의 정책에 따라 일부 데이터가 해당 제공자의
                           모델 품질 개선 목적으로 활용될 수 있으며, 이 경우 각 제공자의 약관 및 개인정보 처리방침이 함께
                           적용됩니다.
@@ -800,7 +800,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                       <h3 className="font-semibold text-base mb-2">9. 문의 및 고객지원</h3>
                       <div className="text-gray-700 leading-relaxed space-y-1">
                         <p>1. 회사는 개인정보 보호 및 서비스 이용 관련 문의를 처리하기 위하여 다음과 같이 개인정보 보호 책임자(겸 담당 부서)를 지정합니다.</p>
-                        <p className="pl-4">- 담당: WAVE TO X</p>
+                        <p className="pl-4">- 담당: WAVERA</p>
                         <p className="pl-4">- 연락처: fromwave.x@gmail.com</p>
                         <p>2. 서비스 이용, 결제, 개인정보 관련 문의는 이메일을 통해 접수하며, 평일 09:00~17:00(한국 시간 기준) 내에서 순차적으로 답변드립니다.</p>
                       </div>
@@ -834,7 +834,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                       </h3>
                       <div className="text-gray-700 leading-relaxed space-y-1">
                         <p>
-                          WAVE TO X (hereinafter the "Company") values the protection of your
+                          WAVERA (hereinafter the "Company") values the protection of your
                           personal information when providing the WAVE log service (hereinafter the
                           "Service"). This Privacy Policy explains what information the Company
                           collects, how it is used, stored, and destroyed, and what rights you
@@ -953,7 +953,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                         </p>
 
                         <p className="pt-2 pl-4">
-                          The Company does not use collected data to train WAVE TO X&apos;s own AI
+                          The Company does not use collected data to train WAVERA&apos;s own AI
                           models (in-house model training). However, depending on the policies of
                           external AI API providers integrated for AI response generation, a
                           subset of data may be used by such providers to improve their model
@@ -1138,7 +1138,7 @@ export function LegalSection({ defaultTab = 'terms' }: LegalSectionProps) {
                           1. The Company designates the following contact point as the person in
                           charge of personal information protection and customer support.
                         </p>
-                        <p className="pl-4">- Responsible entity: WAVE TO X</p>
+                        <p className="pl-4">- Responsible entity: WAVERA</p>
                         <p className="pl-4">- Contact: fromwave.x@gmail.com</p>
                         <p>
                           2. Inquiries regarding service use, payments and personal information
