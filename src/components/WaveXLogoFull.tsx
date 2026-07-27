@@ -4,9 +4,10 @@ interface WaveXLogoFullProps {
   size?: 'small' | 'medium' | 'large';
   animated?: boolean;
   inverted?: boolean;
+  text?: string;
 }
 
-export function WaveXLogoFull({ size = 'medium', animated = false, inverted = false }: WaveXLogoFullProps) {
+export function WaveXLogoFull({ size = 'medium', animated = false, inverted = false, text = 'WAVERA' }: WaveXLogoFullProps) {
   const sizes = {
     small: { 
       circleSize: 30,
@@ -135,7 +136,7 @@ export function WaveXLogoFull({ size = 'medium', animated = false, inverted = fa
         </defs>
       </svg>
 
-      {/* "WAVE X" Text */}
+      {/* Logo Text */}
       <div
         style={{
           fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
@@ -146,7 +147,7 @@ export function WaveXLogoFull({ size = 'medium', animated = false, inverted = fa
           lineHeight: 1,
         }}
       >
-        WAVERA
+        {text}
       </div>
     </Component>
   );

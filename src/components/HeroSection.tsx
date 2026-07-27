@@ -65,18 +65,17 @@ export function HeroSection() {
           >
             🌙 {t('hero.cta4')}
           </Button>
+          <Button
+            onClick={() => window.open('https://grounded.wavetox.com/', '_blank')}
+            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            ⚖️ {t('hero.cta2')}
+          </Button>
           {/* <Button
             onClick={() => navigate('/services')}
             className="bg-[#1A2E40] hover:bg-[#8DA2D7] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             {t('hero.cta1')}
-          </Button>
-          <Button
-            onClick={() => navigate('/services')}
-            variant="outline"
-            className="border-2 border-[#1A2E40] text-[#1A2E40] hover:bg-[#1A2E40] hover:text-white px-8 py-6 rounded-full transition-all duration-300"
-          >
-            {t('hero.cta2')}
           </Button> */}
           {/* <Button
             onClick={() => navigate('/services#daily-fortune')}

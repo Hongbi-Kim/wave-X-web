@@ -25,7 +25,7 @@ const translations = {
     'hero.cta0': 'PomoPet 시작하기',
     'hero.cta4': 'LuckyDream 시작하기',
     'hero.cta1': 'WAVE log 살펴보기',
-    'hero.cta2': 'Grounded 살펴보기',
+    'hero.cta2': 'GROUNDED 시작하기',
     'hero.cta3': '하루의 운세 살펴보기',
     // 'hero.cta3': 'TodayIs 살펴보기',
     
@@ -45,13 +45,13 @@ const translations = {
     'services.title': '우리의 서비스',
 
     // PomoPet
-    'pomopet.slogan': '집중할 땐, 귀여운 친구와 함께.',
-    'pomopet.subSlogan': 'Focus with your tiny companion.',
-    'pomopet.title': 'PomoPet — 데스크탑 펫 집중 타이머',
+    'pomopet.slogan': '작지만 든든한 집중 파트너',
+    'pomopet.subSlogan': 'A small but mighty focus partner',
+    'pomopet.title': '뽀모펫 — 데스크탑 시간을 기록하는 작고 따뜻한 앱',
     'pomopet.description': '귀여운 캐릭터 펫이 데스크탑 위에 상주하며 뽀모도로 타이머로 집중 시간을 함께 기록합니다. 무무, 핑구, 트리버와 함께 더 즐겁게 집중하세요. 회원가입도 인터넷도 필요 없이, 모든 데이터는 내 PC에만 저장됩니다.',
     'pomopet.feature1': '뽀모도로·타이머·스톱워치 모드',
-    'pomopet.feature2': '귀여운 캐릭터 펫 — 무무, 핑구, 트리버',
-    'pomopet.feature3': '통계 대시보드 & 주간 집중 기록',
+    'pomopet.feature2': '귀여운 펫 캐릭터 (캐릭터 커스텀 가능)',
+    'pomopet.feature3': '대시보드 제공',
     'pomopet.feature4': '100% 로컬 — 회원가입·인터넷 불필요',
     'pomopet.cta': '시작하기',
     'pomopet.badge': 'macOS 데스크탑 앱',
@@ -79,13 +79,13 @@ const translations = {
     'waveI.cta': '시작하기',
     
     'grounded.slogan': '근거 위에, 답을 세우다.',
-    'grounded.subSlogan': 'Stand on reason.',
-    'grounded.title': 'Grounded — 건축법 AI 질의응답',
-    'grounded.description': 'Grounded는 건축 실무에서 마주하는 법적 질문에 대해 명확하고 신뢰할 수 있는 근거를 제시하는 AI 질의응답 서비스입니다. 우리는 방대한 법령 속에서 당신의 판단이 설 수 있는 단단한 근거를 찾아드립니다.',
-    'grounded.feature1': '법적 근거 제공 — 정확한 법령, 조례, 규칙 검색',
-    'grounded.feature2': '명확한 해석 — 복잡한 법률 용어를 쉬운 말로',
-    'grounded.feature3': '실무 적용 — 실제 사례와 판례 기반 답변',
-    'grounded.feature4': '최신 법규 — 개정 내용 자동 반영',
+    'grounded.subSlogan': 'Build answers on evidence.',
+    'grounded.title': 'Grounded — 건축법령 AI 에이전트',
+    'grounded.description': 'Grounded는 건축 관련 질문을 분석하고, 관련 법령을 검색해 근거와 함께 안내하는 AI 서비스입니다. 복잡하게 연결된 법령과 참조 조문을 확인하여 사용자가 필요한 기준을 더 쉽고 명확하게 찾을 수 있도록 돕습니다. 모든 데이터는 법제처에서 제공됩니다.',
+    'grounded.feature1': '건축법령 상담 — 질문에 관련된 법령과 조례를 근거로 답변',
+    'grounded.feature2': '법령 검색 — 질문의 핵심 쟁점을 분석해 관련 조문 검색',
+    'grounded.feature3': '참조 조문 확장 — 연결된 법령·시행령·시행규칙까지 확인',
+    'grounded.feature4': '근거 확인 — 답변에 실제 사용된 법령과 조문 원문 제공',
     'grounded.cta': '베타서비스 시작하기',
 
     'fortune.slogan': '고민에서 답으로, 오늘의 흐름을 읽다.',
@@ -144,7 +144,8 @@ const translations = {
     'contact.email': 'Email: fromwave.x@gmail.com',
     
     // Footer
-    'footer.copyright': '© 2026 WAVERA — Designing AI that Flows.',
+    'footer.copyright': '© 2026 WAVERA. All rights reserved.',
+    'footer.info': '대표 김홍비 · 사업자등록번호 184-17-02717',
 
     // Legal
     'legal.title': '약관 및 개인정보 보호',
@@ -166,9 +167,9 @@ const translations = {
     'hero.slogan': 'Opening a better era of life with a new wave of AI.',
     'hero.subtext': 'We design AI that flows with you — calm, intuitive, and human.',
     'hero.cta0': 'Get Started with PomoPet',
-    'hero.cta4': 'Try LuckyDream',
+    'hero.cta4': 'Get Started with LuckyDream',
     'hero.cta1': 'Explore WAVE log',
-    'hero.cta2': 'Explore Grounded',
+    'hero.cta2': 'Get Started with GROUNDED',
     'hero.cta3': 'Explore Daily Fortune',
     
     // About
@@ -187,14 +188,14 @@ const translations = {
     'services.title': 'Our Services',
 
     // PomoPet
-    'pomopet.slogan': 'Focus with your tiny companion.',
-    'pomopet.subSlogan': 'A cute pet lives on your desktop.',
-    'pomopet.title': 'PomoPet — Desktop Pet Focus Timer',
-    'pomopet.description': 'Cute character pets live on your desktop and track your focus time with a Pomodoro timer. Mumu, Pingu, and Triver are here to make your focus sessions more fun. No sign-up, no internet — all data stays on your PC.',
-    'pomopet.feature1': 'Pomodoro, Timer & Stopwatch modes',
-    'pomopet.feature2': 'Cute character pets — Mumu, Pingu, Triver',
-    'pomopet.feature3': 'Stats dashboard & weekly focus history',
-    'pomopet.feature4': '100% Local — no sign-up, no internet',
+    'pomopet.slogan': 'Your Cozy Desktop Focus Companion',
+    'pomopet.subSlogan': 'A small but mighty focus partner',
+    'pomopet.title': 'Pomopet — A Cozy Desktop App That Tracks Your Focus Time',
+    'pomopet.description': 'Cute pet companions stay on your desktop and keep track of your focus sessions with a Pomodoro timer. Stay motivated with Mumu, Pingu, and Triver. No sign-up or internet required—everything is stored locally on your computer.',
+    'pomopet.feature1': 'Pomodoro Timer, Timer & Stopwatch',
+    'pomopet.feature2': 'Cute Pet Characters (Customizable)',
+    'pomopet.feature3': 'Focus Dashboard',
+    'pomopet.feature4': '100% Local — No Sign-up or Internet Required',
     'pomopet.cta': 'Get Started',
     'pomopet.badge': 'macOS Desktop App',
 
@@ -284,7 +285,8 @@ const translations = {
     'contact.email': 'Email: fromwave.x@gmail.com',
     
     // Footer
-    'footer.copyright': '© 2026 WAVERA — Designing AI that Flows.',
+    'footer.copyright': '© 2026 WAVERA. All rights reserved.',
+    'footer.info': 'CEO Hongbi Kim · Business Registration No. 184-17-02717',
 
     // Legal
     'legal.title': 'Terms & Privacy',

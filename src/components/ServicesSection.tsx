@@ -7,13 +7,14 @@ import { GroundedLogoFull } from './GroundedLogoFull';
 import {
   Waves, MessageCircle, BookOpen, BarChart3,
   FileQuestion, Scale, BookOpenCheck, RefreshCw,
+  MessageSquareText, Search, Network,
   Sparkles, Heart,
   TreePine, Gift, PartyPopper,
   Clock, Smile, Shield, Moon, Star,
 } from 'lucide-react';
 
 export function ServicesSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const pomopetFeatures = [
     { icon: Clock, text: t('pomopet.feature1') },
@@ -37,10 +38,10 @@ export function ServicesSection() {
   ];
 
   const groundedFeatures = [
-    { icon: FileQuestion, text: t('grounded.feature1') },
-    { icon: Scale, text: t('grounded.feature2') },
-    { icon: BookOpenCheck, text: t('grounded.feature3') },
-    { icon: RefreshCw, text: t('grounded.feature4') },
+    { icon: MessageSquareText, text: t('grounded.feature1') }, // 건축법령 상담
+    { icon: Search, text: t('grounded.feature2') },            // 법령 검색
+    { icon: Network, text: t('grounded.feature3') },           // 참조 조문 확장
+    { icon: BookOpenCheck, text: t('grounded.feature4') },     // 근거 확인
   ];
 
   const fortuneFeatures = [
@@ -82,8 +83,9 @@ export function ServicesSection() {
               alt="PomoPet icon"
               style={{ width: 50, height: 50, flexShrink: 0, objectFit: 'cover', borderRadius: 12 }}
             />
-            <div>
-            </div>
+            <span style={{ fontFamily: '"Fredoka", system-ui, sans-serif', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.01em' }}>
+              {language === 'ko' ? '뽀모펫' : 'PomoPet'}
+            </span>
           </div>
 
           <div className="mb-6">
@@ -147,6 +149,17 @@ export function ServicesSection() {
               alt="LuckyDream icon"
               style={{ width: 50, height: 50, flexShrink: 0, objectFit: 'cover', borderRadius: 12 }}
             />
+            <span style={{
+              fontFamily: '"Noto Serif KR", serif',
+              fontWeight: 700,
+              fontSize: '1.25rem',
+              background: 'linear-gradient(90deg, #c9a84c 0%, #f5e0a0 40%, #c9a84c 60%, #e8c96a 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
+              {language === 'ko' ? '럭키드림' : 'LuckyDream'}
+            </span>
           </div>
 
           <div className="mb-6">
