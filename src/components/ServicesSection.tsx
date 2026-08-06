@@ -23,6 +23,13 @@ export function ServicesSection() {
     { icon: Shield, text: t('pomopet.feature4') },
   ];
 
+  const groundedFeatures = [
+    { icon: MessageSquareText, text: t('grounded.feature1') }, // 건축법령 상담
+    { icon: Search, text: t('grounded.feature2') },            // 법령 검색
+    { icon: Network, text: t('grounded.feature3') },           // 참조 조문 확장
+    { icon: BookOpenCheck, text: t('grounded.feature4') },     // 근거 확인
+  ];
+
   const luckydreamFeatures = [
     { icon: Moon, text: t('luckydream.feature1') },
     { icon: Star, text: t('luckydream.feature2') },
@@ -30,18 +37,18 @@ export function ServicesSection() {
     { icon: MessageCircle, text: t('luckydream.feature4') },
   ];
 
+  const saylongFeatures = [
+    { icon: MessageCircle, text: t('saylong.feature1') },
+    { icon: BookOpen,      text: t('saylong.feature2') },
+    { icon: BarChart3,     text: t('saylong.feature3') },
+    { icon: RefreshCw,     text: t('saylong.feature4') },
+  ];
+
   const waveIFeatures = [
     { icon: Waves, text: t('waveI.feature1') },
     { icon: MessageCircle, text: t('waveI.feature2') },
     { icon: BookOpen, text: t('waveI.feature3') },
     { icon: BarChart3, text: t('waveI.feature4') },
-  ];
-
-  const groundedFeatures = [
-    { icon: MessageSquareText, text: t('grounded.feature1') }, // 건축법령 상담
-    { icon: Search, text: t('grounded.feature2') },            // 법령 검색
-    { icon: Network, text: t('grounded.feature3') },           // 참조 조문 확장
-    { icon: BookOpenCheck, text: t('grounded.feature4') },     // 근거 확인
   ];
 
   const fortuneFeatures = [
@@ -136,11 +143,70 @@ export function ServicesSection() {
           </div>
         </motion.div>
 
-        {/* LuckyDream */}
+        {/* Grounded */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
+          className="mb-24 bg-gradient-to-br from-white to-[#E8EBF0] rounded-3xl p-8 md:p-12 shadow-xl"
+        >
+          <div className="mb-6">
+            <GroundedLogoFull size="small" animated={true} showTagline={false} />
+          </div>
+
+          <div className="mb-6">
+            <div className="text-[#5A7A9E] mb-2">{t('grounded.slogan')}</div>
+            <div className="text-[#5A7A9E]/80">{t('grounded.subSlogan')}</div>
+          </div>
+
+          <h3 className="text-[#1A2E40] mb-4">{t('grounded.title')}</h3>
+          <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
+            {t('grounded.description')}
+          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="mb-8"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                window.open('https://grounded.wavetox.com/', '_blank');
+              }}
+              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
+              style={{
+                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+                fontWeight: 900,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {t('grounded.cta')}
+            </motion.button>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {groundedFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
+              >
+                <feature.icon className="w-5 h-5 text-[#5A7A9E] flex-shrink-0 mt-1" />
+                <span className="text-[#1A2E40]/90">{feature.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* LuckyDream */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-24 bg-gradient-to-br from-white to-[#F0EBF8] rounded-3xl p-8 md:p-12 shadow-xl"
         >
           <div className="mb-3 flex items-center gap-4">
@@ -210,6 +276,81 @@ export function ServicesSection() {
           </div>
         </motion.div>
 
+        {/* SayLong */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mb-24 bg-gradient-to-br from-white to-[#EDE8FF] rounded-3xl p-8 md:p-12 shadow-xl"
+        >
+          <div className="mb-3 flex items-center gap-4">
+            <img
+              src="/images/saylong.png"
+              alt="SayLong icon"
+              style={{ width: 50, height: 50, flexShrink: 0, objectFit: 'cover', borderRadius: 12 }}
+            />
+            <span style={{
+              fontFamily: '"Plus Jakarta Sans", system-ui, sans-serif',
+              fontWeight: 800,
+              fontSize: '1.25rem',
+              letterSpacing: '-0.02em',
+              background: 'linear-gradient(135deg, #7c5cfc 0%, #3ecfcf 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
+              Say<span style={{ WebkitTextFillColor: 'transparent' }}>Long</span>
+            </span>
+          </div>
+
+          <div className="mb-6">
+            <div className="text-[#7c5cfc] mb-2">{t('saylong.slogan')}</div>
+            <div className="text-[#7c5cfc]/80">{t('saylong.subSlogan')}</div>
+          </div>
+
+          <h3 className="text-[#1A2E40] mb-4">{t('saylong.title')}</h3>
+          <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
+            {t('saylong.description')}
+          </p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="mb-8"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://saylong.wavetox.com/', '_blank')}
+              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
+              style={{
+                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+                fontWeight: 900,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}
+            >
+              🗣️ {t('saylong.cta')}
+            </motion.button>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {saylongFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
+              >
+                <feature.icon className="w-5 h-5 text-[#7c5cfc] flex-shrink-0 mt-1" />
+                <span className="text-[#1A2E40]/90">{feature.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Wave I */}
         {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -220,14 +361,14 @@ export function ServicesSection() {
           <div className="mb-6">
             <WaveLogoFull size="small" animated={true} />
           </div>
-          
+
           <div className="mb-6">
             <div className="text-[#8DA2D7] mb-2">{t('waveI.slogan')}</div>
             <div className="text-[#8DA2D7]/80">{t('waveI.subSlogan')}</div>
           </div>
-          
+
           <h3 className="text-[#1A2E40] mb-4">{t('waveI.title')}</h3>
-          
+
           <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
             {t('waveI.description')}
           </p>
@@ -271,65 +412,6 @@ export function ServicesSection() {
             ))}
           </div>
         </motion.div> */}
-
-        {/* Grounded */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-24 bg-gradient-to-br from-white to-[#E8EBF0] rounded-3xl p-8 md:p-12 shadow-xl"
-        >
-          <div className="mb-6">
-            <GroundedLogoFull size="small" animated={true} showTagline={false} />
-          </div>
-          
-          <div className="mb-6">
-            <div className="text-[#5A7A9E] mb-2">{t('grounded.slogan')}</div>
-            <div className="text-[#5A7A9E]/80">{t('grounded.subSlogan')}</div>
-          </div>
-          
-          <h3 className="text-[#1A2E40] mb-4">{t('grounded.title')}</h3>
-          <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
-            {t('grounded.description')}
-          </p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="mb-8"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                window.open('https://grounded.wavetox.com/', '_blank');
-              }}
-              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
-              style={{
-                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
-                fontWeight: 900,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-              }}
-            >
-              {t('grounded.cta')}
-            </motion.button>
-          </motion.div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {groundedFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
-              >
-                <feature.icon className="w-5 h-5 text-[#5A7A9E] flex-shrink-0 mt-1" />
-                <span className="text-[#1A2E40]/90">{feature.text}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Daily Fortune */}
         {/* <motion.div
@@ -421,13 +503,13 @@ export function ServicesSection() {
           </div> */}
 
           {/* 타이틀 + 설명 */}
-          
+
           <div className="mb-8 space-y-3">
-            
+
             <h3 className="text-3xl md:text-3xl font-semibold text-[#1A2E40] leading-snug">
               {t('christmas.title')}
             </h3>
-            
+
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-semibold mb-1">
             🎄  {t('christmas.badge')}
                 </div>
@@ -474,12 +556,12 @@ export function ServicesSection() {
           <div className="mb-6">
             <TodayIsLogoFull size="medium" animated={true} />
           </div>
-          
+
           <div className="mb-6">
             <div className="text-[#C4A354] mb-2">{t('todayis.slogan')}</div>
             <div className="text-[#C4A354]/80">{t('todayis.subSlogan')}</div>
           </div>
-          
+
           <h3 className="text-[#1A2E40] mb-4">{t('todayis.title')}</h3>
           <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
             {t('todayis.description')}

@@ -88,6 +88,17 @@ const translations = {
     'grounded.feature4': '근거 확인 — 답변에 실제 사용된 법령과 조문 원문 제공',
     'grounded.cta': '베타서비스 시작하기',
 
+    // SayLong
+    'saylong.slogan': '한국어로 시작해 영어로 말하다.',
+    'saylong.subSlogan': 'Build it. Say it. Own it.',
+    'saylong.title': 'SayLong — AI 영어 말하기 코치',
+    'saylong.description': '한국어로 하고 싶은 말을 입력하면, AI가 단계별 영어 문장으로 분해해 말하기 연습을 도와줍니다. 매일 새로운 오늘의 미션으로 일상 영어 표현을 쌓고, 복습 플래시카드로 내 표현을 완성하세요.',
+    'saylong.feature1': 'AI 문장 분해 — 한국어를 단계별 영어 말하기로',
+    'saylong.feature2': '3가지 모드 — 한국어로 시작 / 영어로 먼저 / 오늘의 미션',
+    'saylong.feature3': 'AI 피드백 & 코칭 — 문법, 표현, 점수 제공',
+    'saylong.feature4': '복습 플래시카드 — 완성된 문장 반복 학습',
+    'saylong.cta': '서비스 살펴보기',
+
     'fortune.slogan': '고민에서 답으로, 오늘의 흐름을 읽다.',
     'fortune.subSlogan': '하루와 운세를 AI와 함께.',
     'fortune.title': '하루의 운세 — AI 운세 상담 & 맞춤 리포트',
@@ -230,6 +241,17 @@ const translations = {
     'grounded.feature3': 'Practical Application — Case-based answers with precedents',
     'grounded.feature4': 'Latest Regulations — Auto-updates with amendments',
     'grounded.cta': 'Coming Soon',
+
+    // SayLong
+    'saylong.slogan': 'Start in Korean. Speak in English.',
+    'saylong.subSlogan': 'Build it. Say it. Own it.',
+    'saylong.title': 'SayLong — AI English Speaking Coach',
+    'saylong.description': 'Type what you want to say in Korean, and SayLong\'s AI breaks it down into step-by-step English speaking practice. Build your expressions with daily missions and reinforce them with review flashcards.',
+    'saylong.feature1': 'AI Sentence Breakdown — From Korean to step-by-step English',
+    'saylong.feature2': '3 Modes — Korean First / English First / Daily Mission',
+    'saylong.feature3': 'AI Feedback & Coaching — Grammar, expressions, scores',
+    'saylong.feature4': 'Review Flashcards — Spaced repetition for your expressions',
+    'saylong.cta': 'Explore Service',
 
     'fortune.slogan': 'From concerns to clarity, read today\'s flow.',
     'fortune.subSlogan': 'Daily fortune with AI guidance.',
