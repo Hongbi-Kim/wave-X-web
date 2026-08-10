@@ -67,12 +67,13 @@ export function ServicesSection() {
 
   return (
     <section className="min-h-screen flex items-center justify-center py-24 px-6 bg-gradient-to-br from-[#F8FAFB] to-[#E8EEF5]">
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-6xl mx-auto w-full flex flex-col">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
+          style={{ order: 0 }}
         >
           <h2 className="text-[#1A2E40]">{t('services.title')}</h2>
         </motion.div>
@@ -83,6 +84,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-24 bg-gradient-to-br from-white to-[#FFF0ED] rounded-3xl p-8 md:p-12 shadow-xl"
+          style={{ order: 3 }}
         >
           <div className="mb-3 flex items-center gap-4">
             <img
@@ -149,6 +151,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-24 bg-gradient-to-br from-white to-[#E8EBF0] rounded-3xl p-8 md:p-12 shadow-xl"
+          style={{ order: 1 }}
         >
           <div className="mb-6">
             <GroundedLogoFull size="small" animated={true} showTagline={false} />
@@ -208,6 +211,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-24 bg-gradient-to-br from-white to-[#F0EBF8] rounded-3xl p-8 md:p-12 shadow-xl"
+          style={{ order: 4 }}
         >
           <div className="mb-3 flex items-center gap-4">
             <img
@@ -282,6 +286,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mb-24 bg-gradient-to-br from-white to-[#EDE8FF] rounded-3xl p-8 md:p-12 shadow-xl"
+          style={{ order: 2 }}
         >
           <div className="mb-3 flex items-center gap-4">
             <img
@@ -481,6 +486,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-24 bg-gradient-to-br from-white to-[#FFF5F6] rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden"
+          style={{ order: 5 }}
         >
           {/* 상단 로고/아이콘 영역
           <div className="mb-6 flex items-center justify-between gap-4">

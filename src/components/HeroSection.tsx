@@ -54,29 +54,29 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button
+            onClick={() => window.open('https://grounded.wavetox.com/', '_blank')}
+            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            ⚖️ {t('hero.cta2')}
+          </Button>
+          <Button
+            onClick={() => window.open('https://saylong.wavetox.com/', '_blank')}
+            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            🗣️ {t('hero.ctaSayLong')}
+          </Button>
+          <Button
             onClick={() => window.open('https://pomopet.wavetox.com/', '_blank')}
             className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             🐾 {t('hero.cta0')}
           </Button>
           <Button
-            onClick={() => window.open('https://luckydream.wavetox.com/', '_blank')}
-            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            🌙 {t('hero.cta4')}
-          </Button>
-          <Button
-            onClick={() => window.open('https://grounded.wavetox.com/', '_blank')}
-            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            ⚖️ {t('hero.cta2')}
-          </Button>
-          {/* <Button
             onClick={() => navigate('/services')}
             className="bg-[#1A2E40] hover:bg-[#8DA2D7] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            {t('hero.cta1')}
-          </Button> */}
+            {t('hero.moreServices')}
+          </Button>
           {/* <Button
             onClick={() => navigate('/services#daily-fortune')}
             variant="outline"

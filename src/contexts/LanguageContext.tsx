@@ -27,6 +27,8 @@ const translations = {
     'hero.cta1': 'WAVE log 살펴보기',
     'hero.cta2': 'GROUNDED 시작하기',
     'hero.cta3': '하루의 운세 살펴보기',
+    'hero.ctaSayLong': 'SayLong 시작하기',
+    'hero.moreServices': '서비스 더 보기',
     // 'hero.cta3': 'TodayIs 살펴보기',
     
     // About
@@ -97,7 +99,7 @@ const translations = {
     'saylong.feature2': '3가지 모드 — 한국어로 시작 / 영어로 먼저 / 오늘의 미션',
     'saylong.feature3': 'AI 피드백 & 코칭 — 문법, 표현, 점수 제공',
     'saylong.feature4': '복습 플래시카드 — 완성된 문장 반복 학습',
-    'saylong.cta': '서비스 살펴보기',
+    'saylong.cta': '시작하기',
 
     'fortune.slogan': '고민에서 답으로, 오늘의 흐름을 읽다.',
     'fortune.subSlogan': '하루와 운세를 AI와 함께.',
@@ -182,6 +184,8 @@ const translations = {
     'hero.cta1': 'Explore WAVE log',
     'hero.cta2': 'Get Started with GROUNDED',
     'hero.cta3': 'Explore Daily Fortune',
+    'hero.ctaSayLong': 'Get Started with SayLong',
+    'hero.moreServices': 'View More Services',
     
     // About
     'about.title': 'About WAVERA',
@@ -251,7 +255,7 @@ const translations = {
     'saylong.feature2': '3 Modes — Korean First / English First / Daily Mission',
     'saylong.feature3': 'AI Feedback & Coaching — Grammar, expressions, scores',
     'saylong.feature4': 'Review Flashcards — Spaced repetition for your expressions',
-    'saylong.cta': 'Explore Service',
+    'saylong.cta': 'Get Started',
 
     'fortune.slogan': 'From concerns to clarity, read today\'s flow.',
     'fortune.subSlogan': 'Daily fortune with AI guidance.',
