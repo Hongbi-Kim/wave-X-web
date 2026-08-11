@@ -70,9 +70,20 @@ export function PhilosophySection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-[#1A2E40] mb-8"
+          className="text-[#1A2E40] text-lg mb-8"
         >
-          {t('philosophy.title')}
+          {(() => {
+            const title = t('philosophy.title');
+            const parts = title.split(', ');
+            if (parts.length < 2) return title;
+            return (
+              <>
+                {parts[0]},
+                <br />
+                {parts.slice(1).join(', ')}
+              </>
+            );
+          })()}
         </motion.h2>
 
         <motion.div
@@ -89,8 +100,37 @@ export function PhilosophySection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-[#1A2E40]/80 max-w-2xl mx-auto"
+          style={{ fontSize: 'clamp(0.8rem, 3.2vw, 1rem)' }}
         >
-          {t('philosophy.description')}
+          {(() => {
+            const description = t('philosophy.description');
+            const sentences = description.split('. ');
+            if (sentences.length < 2) return description;
+            const [firstSentence, ...restSentences] = sentences;
+            const secondSentence = restSentences.join('. ');
+            const clauses = firstSentence.split(', ');
+            if (clauses.length < 2) {
+              return (
+                <>
+                  {firstSentence}.
+                  <br />
+                  {secondSentence}
+                </>
+              );
+            }
+            const [clause1, ...restClauses] = clauses;
+            const clause2 = restClauses.join(', ');
+            return (
+              <>
+                {clause1},
+                <br className="sm:hidden" />
+                <span className="hidden sm:inline"> </span>
+                {clause2}.
+                <br />
+                {secondSentence}
+              </>
+            );
+          })()}
         </motion.p>
       </div>
     </section>

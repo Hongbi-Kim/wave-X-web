@@ -21,8 +21,8 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="flex justify-center mb-8"
         >
-          <div className="sm:hidden" style={{ transform: 'scale(0.85)' }}>
-            <WaveXLogoFull size="large" animated={true} />
+          <div className="sm:hidden">
+            <WaveXLogoFull size="medium" animated={true} />
           </div>
           <div className="hidden sm:block">
             <WaveXLogoFull size="large" animated={true} />
@@ -44,7 +44,17 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-[#1A2E40]/80 mb-12 max-w-2xl mx-auto"
         >
-          {t('hero.subtext')}
+          {(() => {
+            const [lead, rest] = t('hero.subtext').split(' — ');
+            return (
+              <>
+                {lead}
+                <br className="sm:hidden" />
+                <span className="hidden sm:inline"> </span>
+                — {rest}
+              </>
+            );
+          })()}
         </motion.p>
 
         <motion.div
