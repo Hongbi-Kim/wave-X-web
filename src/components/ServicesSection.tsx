@@ -37,6 +37,13 @@ export function ServicesSection() {
     { icon: MessageCircle, text: t('luckydream.feature4') },
   ];
 
+  const mallimiFeatures = [
+    { icon: Scale, text: t('mallimi.feature1') },
+    { icon: FileQuestion, text: t('mallimi.feature2') },
+    { icon: RefreshCw, text: t('mallimi.feature3') },
+    { icon: Heart, text: t('mallimi.feature4') },
+  ];
+
   const saylongFeatures = [
     { icon: MessageCircle, text: t('saylong.feature1') },
     { icon: BookOpen,      text: t('saylong.feature2') },
@@ -280,6 +287,70 @@ export function ServicesSection() {
           </div>
         </motion.div>
 
+        {/* Mallimi */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="mb-24 bg-gradient-to-br from-white to-[#FFF3E0] rounded-3xl p-8 md:p-12 shadow-xl"
+          style={{ order: 5 }}
+        >
+          <div className="mb-3 flex items-center gap-4">
+            <img
+              src="/images/mallimi.png"
+              alt="Mallimi logo"
+              style={{ height: 40, width: 'auto', flexShrink: 0, objectFit: 'contain' }}
+            />
+          </div>
+
+          <div className="mb-6">
+            <div className="text-[#C67A35] mb-2">{t('mallimi.slogan')}</div>
+            <div className="text-[#C67A35]/80">{t('mallimi.subSlogan')}</div>
+          </div>
+
+          <h3 className="text-[#1A2E40] mb-4">{t('mallimi.title')}</h3>
+          <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
+            {t('mallimi.description')}
+          </p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="mb-8"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://mallime.wavetox.com/', '_blank')}
+              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
+              style={{
+                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+                fontWeight: 900,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}
+            >
+              🦑 {t('mallimi.cta')}
+            </motion.button>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {mallimiFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
+              >
+                <feature.icon className="w-5 h-5 text-[#C67A35] flex-shrink-0 mt-1" />
+                <span className="text-[#1A2E40]/90">{feature.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* SayLong */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -486,7 +557,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-24 bg-gradient-to-br from-white to-[#FFF5F6] rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden"
-          style={{ order: 5 }}
+          style={{ order: 6 }}
         >
           {/* 상단 로고/아이콘 영역
           <div className="mb-6 flex items-center justify-between gap-4">

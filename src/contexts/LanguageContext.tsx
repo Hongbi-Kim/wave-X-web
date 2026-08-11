@@ -70,6 +70,18 @@ const translations = {
     'luckydream.cta': '시작하기',
     'luckydream.badge': 'AI 웹 서비스',
 
+    // Mallimi
+    'mallimi.slogan': '결제 직전, 황당한 이유로 소비를 말려주는 앱',
+    'mallimi.subSlogan': 'Don\'t Buy It, says the dried squid.',
+    'mallimi.title': '말리미 — 결제 말리미',
+    'mallimi.description': '사고 싶은 물건과 가격을 입력하면, 말린 오징어 캐릭터 \'말리미\'가 가격과 카테고리를 분석하는 척하며 어떻게든 안 사야 할 이유를 찾아줘요. 설득되지 않으면 다른 이유를 요구하고, 그래도 사고 싶다면 말리미의 체념을 받을 수 있어요.',
+    'mallimi.feature1': '가격대별 황당한 만류 문구',
+    'mallimi.feature2': '카테고리·이유 맞춤 반응',
+    'mallimi.feature3': '약해, 다른 이유로 말려줘 (최대 3회)',
+    'mallimi.feature4': '결과를 이미지로 저장·공유',
+    'mallimi.cta': '말려달라고 하기',
+    'mallimi.badge': '앱인토스 미니앱',
+
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': '당신의 파도를 따라 흘러가세요.',
     'waveI.title': 'WAVE log — AI 심리 케어',
@@ -225,6 +237,18 @@ const translations = {
     'luckydream.feature4': 'A dream card delivered by the Dream Fairy',
     'luckydream.cta': 'Get Started',
     'luckydream.badge': 'AI Web Service',
+
+    // Mallimi
+    'mallimi.slogan': 'Right before checkout, it talks you out of buying — for absurd reasons.',
+    'mallimi.subSlogan': 'Don\'t Buy It, says the dried squid.',
+    'mallimi.title': 'Mallimi — Don\'t Buy It',
+    'mallimi.description': 'Enter what you want to buy and its price, and Mallimi — a dried squid character — pretends to analyze the price and category to find some reason, any reason, not to buy it. Not convinced? Ask for another reason. Still want it anyway? Mallimi will accept your decision, reluctantly.',
+    'mallimi.feature1': 'Absurd reasons tailored to the price range',
+    'mallimi.feature2': 'Responses matched to category and reason',
+    'mallimi.feature3': '"Try again" for another reason (up to 3 times)',
+    'mallimi.feature4': 'Save and share the result as an image',
+    'mallimi.cta': 'Talk Me Out of It',
+    'mallimi.badge': 'Apps in Toss Mini App',
 
     'waveI.slogan': 'Ride your inner wave.',
     'waveI.subSlogan': 'Flow with your feelings.',
