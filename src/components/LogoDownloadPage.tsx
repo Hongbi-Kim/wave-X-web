@@ -13,10 +13,56 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Label } from './ui/label';
 
+// Full-logo components render an icon <svg> next to a separate text <div>,
+// so exporting just the inner <svg> silently drops the wordmark text.
+// Wrap the whole rendered node in a foreignObject when it isn't already an <svg>.
+function toExportableSvgElement(renderedRoot: Element): SVGElement {
+  const topNode = renderedRoot.firstElementChild as HTMLElement | null;
+  if (!topNode) throw new Error('Nothing rendered to export');
+
+  if (topNode.tagName.toLowerCase() === 'svg') {
+    return topNode as unknown as SVGElement;
+  }
+
+  const rect = topNode.getBoundingClientRect();
+  const width = Math.ceil(rect.width) || 500;
+  const height = Math.ceil(rect.height) || 500;
+
+  const clone = topNode.cloneNode(true) as HTMLElement;
+  clone.querySelectorAll('*').forEach((el) => {
+    el.removeAttribute('data-projection-id');
+  });
+
+  const wrapper = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  wrapper.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  wrapper.setAttribute('width', String(width));
+  wrapper.setAttribute('height', String(height));
+  wrapper.setAttribute('viewBox', `0 0 ${width} ${height}`);
+
+  const foreignObject = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
+  foreignObject.setAttribute('width', '100%');
+  foreignObject.setAttribute('height', '100%');
+
+  const xhtmlWrapper = document.createElementNS('http://www.w3.org/1999/xhtml', 'div');
+  xhtmlWrapper.setAttribute(
+    'style',
+    `width:${width}px;height:${height}px;display:flex;align-items:center;justify-content:center;`
+  );
+  xhtmlWrapper.appendChild(clone);
+
+  foreignObject.appendChild(xhtmlWrapper);
+  wrapper.appendChild(foreignObject);
+
+  return wrapper;
+}
+
 export function LogoDownloadPage() {
   const [isRecording, setIsRecording] = useState(false);
   const [pngResolution, setPngResolution] = useState<number>(4);
   const [videoResolution, setVideoResolution] = useState<number>(1920);
+  const [waveraLang, setWaveraLang] = useState<'en' | 'ko'>('en');
+  const [waveraDark, setWaveraDark] = useState(false);
+  const waveraText = waveraLang === 'ko' ? '웨이베라' : 'WAVERA';
 
   const downloadSVG = (component: React.ReactElement, filename: string) => {
     const container = document.createElement('div');
@@ -32,28 +78,28 @@ export function LogoDownloadPage() {
       reactRoot.render(component);
       
       setTimeout(() => {
-        const svgElement = root.querySelector('svg');
-        if (svgElement) {
-          const clonedSvg = svgElement.cloneNode(true) as SVGElement;
-          
-          // Remove any motion-specific attributes
-          clonedSvg.querySelectorAll('*').forEach((el) => {
-            el.removeAttribute('data-projection-id');
-            el.removeAttribute('style');
-          });
-          
-          const svgData = new XMLSerializer().serializeToString(clonedSvg);
-          const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-          const url = URL.createObjectURL(svgBlob);
-          
-          const link = document.createElement('a');
-          link.href = url;
-          link.download = filename;
-          link.click();
-          
-          URL.revokeObjectURL(url);
-        }
-        
+        const exportSvg = toExportableSvgElement(root);
+        const clonedSvg = exportSvg.cloneNode(true) as SVGElement;
+
+        // Remove any motion-specific attributes (inline styles carry the
+        // wordmark text's font styling, so only strip them on plain icon SVGs)
+        const isPlainIconSvg = exportSvg.tagName.toLowerCase() === 'svg' && !exportSvg.querySelector('foreignObject');
+        clonedSvg.querySelectorAll('*').forEach((el) => {
+          el.removeAttribute('data-projection-id');
+          if (isPlainIconSvg) el.removeAttribute('style');
+        });
+
+        const svgData = new XMLSerializer().serializeToString(clonedSvg);
+        const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(svgBlob);
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        link.click();
+
+        URL.revokeObjectURL(url);
+
         reactRoot.unmount();
         document.body.removeChild(container);
       }, 100);
@@ -75,46 +121,45 @@ export function LogoDownloadPage() {
       reactRoot.render(component);
       
       setTimeout(() => {
-        const svgElement = root.querySelector('svg') as SVGElement;
-        if (svgElement) {
-          const svgData = new XMLSerializer().serializeToString(svgElement);
-          const canvas = document.createElement('canvas');
-          const ctx = canvas.getContext('2d');
-          const img = new Image();
-          
-          // Base size for logos (larger base for better quality)
-          const baseSize = 500;
-          const finalSize = baseSize * scale;
-          
-          canvas.width = finalSize;
-          canvas.height = finalSize;
-          
-          img.onload = () => {
-            if (ctx) {
-              // ctx.fillStyle = 'transparent';
-              ctx.fillStyle = '#ffffff';
-              // ctx.fillRect(0, 0, finalSize, finalSize);
-              ctx.fillRect(0, 0, finalSize, finalSize);
-              ctx.drawImage(img, 0, 0, finalSize, finalSize);
-              
-              canvas.toBlob((blob) => {
-                if (blob) {
-                  const url = URL.createObjectURL(blob);
-                  const link = document.createElement('a');
-                  link.href = url;
-                  link.download = filename;
-                  link.click();
-                  URL.revokeObjectURL(url);
-                }
-              }, 'image/png');
-            }
-            
-            reactRoot.unmount();
-            document.body.removeChild(container);
-          };
-          
-          img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
-        }
+        const exportSvg = toExportableSvgElement(root);
+        const svgData = new XMLSerializer().serializeToString(exportSvg);
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+
+        // Base size for logos (larger base for better quality),
+        // scaled to the element's real aspect ratio (full logos are wide, not square)
+        const svgWidth = Number(exportSvg.getAttribute('width')) || 500;
+        const svgHeight = Number(exportSvg.getAttribute('height')) || 500;
+        const baseSize = 500;
+        const finalHeight = baseSize * scale;
+        const finalWidth = Math.round(finalHeight * (svgWidth / svgHeight));
+
+        canvas.width = finalWidth;
+        canvas.height = finalHeight;
+
+        img.onload = () => {
+          if (ctx) {
+            // Leave the canvas transparent (no background fill) for a transparent PNG
+            ctx.drawImage(img, 0, 0, finalWidth, finalHeight);
+
+            canvas.toBlob((blob) => {
+              if (blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = filename;
+                link.click();
+                URL.revokeObjectURL(url);
+              }
+            }, 'image/png');
+          }
+
+          reactRoot.unmount();
+          document.body.removeChild(container);
+        };
+
+        img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
       }, 100);
     });
   };
@@ -145,13 +190,18 @@ export function LogoDownloadPage() {
     // Wait for component to render
     await new Promise(resolve => setTimeout(resolve, 500));
 
-    const svgElement = root.querySelector('svg');
-    if (!svgElement) {
+    let initialExportSvg: SVGElement;
+    try {
+      initialExportSvg = toExportableSvgElement(root);
+    } catch {
       reactRoot.unmount();
       document.body.removeChild(container);
       setIsRecording(false);
       return;
     }
+    const exportAspectRatio =
+      (Number(initialExportSvg.getAttribute('width')) || 1) /
+      (Number(initialExportSvg.getAttribute('height')) || 1);
 
     // Create canvas for recording
     const canvas = document.createElement('canvas');
@@ -211,20 +261,22 @@ export function LogoDownloadPage() {
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
-      // Get current SVG state
-      const svgData = new XMLSerializer().serializeToString(svgElement);
+      // Get current SVG state (re-captured each frame so the icon's motion animation still plays)
+      const svgData = new XMLSerializer().serializeToString(toExportableSvgElement(root));
       const img = new Image();
-      
+
       img.onload = () => {
-        // Draw centered with padding
+        // Draw centered with padding, preserving the logo's aspect ratio (full logos are wide, not square)
         const padding = resolution * 0.1;
-        const size = resolution - (padding * 2);
-        const x = padding;
-        const y = padding;
-        ctx.drawImage(img, x, y, size, size);
+        const box = resolution - (padding * 2);
+        const drawWidth = exportAspectRatio >= 1 ? box : box * exportAspectRatio;
+        const drawHeight = exportAspectRatio >= 1 ? box / exportAspectRatio : box;
+        const x = padding + (box - drawWidth) / 2;
+        const y = padding + (box - drawHeight) / 2;
+        ctx.drawImage(img, x, y, drawWidth, drawHeight);
         requestAnimationFrame(animate);
       };
-      
+
       img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
     };
 
@@ -233,16 +285,17 @@ export function LogoDownloadPage() {
 
   const logoSets = [
     {
-      title: 'Wave X',
+      title: 'WAVERA',
       description: 'Company logo',
-      icon: <WaveXLogo size={80} animated={true} />,
-      full: <WaveXLogoFull size="medium" animated={true} />,
-      iconComponent: <WaveXLogo size={500} animated={false} />,
-      fullComponent: <WaveXLogoFull size="large" animated={false} />,
-      iconAnimated: <WaveXLogo size={800} animated={true} />,
-      fullAnimated: <WaveXLogoFull size="large" animated={true} />,
-      iconName: 'wavex-icon',
-      fullName: 'wavex-full',
+      icon: <WaveXLogo size={80} animated={true} inverted={waveraDark} />,
+      full: <WaveXLogoFull size="medium" animated={true} inverted={waveraDark} text={waveraText} />,
+      iconComponent: <WaveXLogo size={500} animated={false} inverted={waveraDark} />,
+      fullComponent: <WaveXLogoFull size="large" animated={false} inverted={waveraDark} text={waveraText} />,
+      iconAnimated: <WaveXLogo size={800} animated={true} inverted={waveraDark} />,
+      fullAnimated: <WaveXLogoFull size="large" animated={true} inverted={waveraDark} text={waveraText} />,
+      iconName: `wavex-icon${waveraDark ? '-dark' : ''}`,
+      fullName: `wavex-full${waveraLang === 'ko' ? '-ko' : ''}${waveraDark ? '-dark' : ''}`,
+      hasToggles: true,
     },
     {
       title: 'Wave I',
@@ -255,6 +308,7 @@ export function LogoDownloadPage() {
       fullAnimated: <WaveLogoFull size="large" animated={true} />,
       iconName: 'wavei-icon',
       fullName: 'wavei-full',
+      hasToggles: false,
     },
     {
       title: 'Grounded',
@@ -267,6 +321,7 @@ export function LogoDownloadPage() {
       fullAnimated: <GroundedLogoFull size="large" animated={true} />,
       iconName: 'grounded-icon',
       fullName: 'grounded-full',
+      hasToggles: false,
     },
     {
       title: 'TodayIs',
@@ -279,6 +334,7 @@ export function LogoDownloadPage() {
       fullAnimated: <TodayIsLogoFull size="large" animated={true} />,
       iconName: 'todayis-icon',
       fullName: 'todayis-full',
+      hasToggles: false,
     },
   ];
 
@@ -371,11 +427,56 @@ export function LogoDownloadPage() {
                   <CardTitle className="text-3xl">{logoSet.title}</CardTitle>
                   <CardDescription className="text-lg">{logoSet.description}</CardDescription>
                 </CardHeader>
+                {logoSet.hasToggles && (
+                  <div className="flex flex-wrap gap-6 px-8 pt-6">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-slate-600">Language</span>
+                      <Button
+                        variant={waveraLang === 'en' ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setWaveraLang('en')}
+                      >
+                        WAVERA
+                      </Button>
+                      <Button
+                        variant={waveraLang === 'ko' ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setWaveraLang('ko')}
+                      >
+                        웨이베라
+                      </Button>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-slate-600">Theme</span>
+                      <Button
+                        variant={!waveraDark ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setWaveraDark(false)}
+                      >
+                        Light
+                      </Button>
+                      <Button
+                        variant={waveraDark ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setWaveraDark(true)}
+                      >
+                        Dark
+                      </Button>
+                    </div>
+                  </div>
+                )}
                 <CardContent className="p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     {/* Icon Version */}
                     <div className="space-y-4">
-                      <div className="flex items-center justify-center h-40 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg">
+                      <div
+                        className="flex items-center justify-center h-40 rounded-lg"
+                        style={
+                          logoSet.hasToggles && waveraDark
+                            ? { background: 'linear-gradient(to bottom right, #1e293b, #0f172a)' }
+                            : { background: 'linear-gradient(to bottom right, #f1f5f9, #e2e8f0)' }
+                        }
+                      >
                         {logoSet.icon}
                       </div>
                       <div className="text-center mb-4">
@@ -412,7 +513,14 @@ export function LogoDownloadPage() {
 
                     {/* Full Logo Version */}
                     <div className="space-y-4">
-                      <div className="flex items-center justify-center h-40 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg">
+                      <div
+                        className="flex items-center justify-center h-40 rounded-lg"
+                        style={
+                          logoSet.hasToggles && waveraDark
+                            ? { background: 'linear-gradient(to bottom right, #1e293b, #0f172a)' }
+                            : { background: 'linear-gradient(to bottom right, #f1f5f9, #e2e8f0)' }
+                        }
+                      >
                         {logoSet.full}
                       </div>
                       <div className="text-center mb-4">
