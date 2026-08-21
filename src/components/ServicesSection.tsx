@@ -322,7 +322,7 @@ export function ServicesSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://mallime.thewavera.com/', '_blank')}
+              onClick={() => window.open('https://minion.toss.im/BtQyOMLe', '_blank')}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
                 fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',

@@ -79,7 +79,7 @@ const translations = {
     'mallimi.feature2': '카테고리·이유 맞춤 반응',
     'mallimi.feature3': '약해, 다른 이유로 말려줘 (최대 3회)',
     'mallimi.feature4': '결과를 이미지로 저장·공유',
-    'mallimi.cta': '말려달라고 하기',
+    'mallimi.cta': '말려달라고 하기 (토스 미니앱)',
     'mallimi.badge': '앱인토스 미니앱',
 
     'waveI.slogan': 'Ride your inner wave.',
@@ -247,7 +247,7 @@ const translations = {
     'mallimi.feature2': 'Responses matched to category and reason',
     'mallimi.feature3': '"Try again" for another reason (up to 3 times)',
     'mallimi.feature4': 'Save and share the result as an image',
-    'mallimi.cta': 'Talk Me Out of It',
+    'mallimi.cta': 'Talk Me Out of It (in Toss Mini App)',
     'mallimi.badge': 'Apps in Toss Mini App',
 
     'waveI.slogan': 'Ride your inner wave.',
