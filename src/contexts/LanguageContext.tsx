@@ -166,7 +166,7 @@ const translations = {
     'contact.title': "Let's Connect.",
     'contact.subtext': '협업하거나, 파트너십을 맺거나, 그냥 인사하세요.',
     'contact.cta1': 'WAVERA에 연락하기',
-    'contact.email': 'Email: fromwave.x@gmail.com',
+    'contact.email': 'Email: contact@thewavera.com',
     
     // Footer
     'footer.copyright': '© 2026 WAVERA. All rights reserved.',
@@ -332,7 +332,7 @@ const translations = {
     'contact.title': "Let's Connect.",
     'contact.subtext': 'Collaborate, partner, or just say hello.',
     'contact.cta1': 'Contact WAVERA',
-    'contact.email': 'Email: fromwave.x@gmail.com',
+    'contact.email': 'Email: contact@thewavera.com',
     
     // Footer
     'footer.copyright': '© 2026 WAVERA. All rights reserved.',
