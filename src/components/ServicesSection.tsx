@@ -123,7 +123,7 @@ export function ServicesSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://pomopet.wavetox.com/', '_blank')}
+              onClick={() => window.open('https://pomopet.thewavera.com/', '_blank')}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
                 fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
@@ -183,7 +183,7 @@ export function ServicesSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                window.open('https://grounded.wavetox.com/', '_blank');
+                window.open('https://grounded.thewavera.com/', '_blank');
               }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
@@ -258,7 +258,7 @@ export function ServicesSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://luckydream.wavetox.com/', '_blank')}
+              onClick={() => window.open('https://luckydream.thewavera.com/', '_blank')}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
                 fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
@@ -322,7 +322,7 @@ export function ServicesSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://mallime.wavetox.com/', '_blank')}
+              onClick={() => window.open('https://mallime.thewavera.com/', '_blank')}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
                 fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
@@ -398,7 +398,7 @@ export function ServicesSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://saylong.wavetox.com/', '_blank')}
+              onClick={() => window.open('https://saylong.thewavera.com/', '_blank')}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
                 fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
@@ -459,7 +459,7 @@ export function ServicesSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                window.open('https://wavelog.wavetox.com/', '_blank');
+                window.open('https://wavelog.thewavera.com/', '_blank');
               }}
               className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
               style={{
@@ -608,7 +608,7 @@ export function ServicesSection() {
             className="mb-16"
           >
             <motion.a
-              href="https://christmas.wavetox.com/"
+              href="https://christmas.thewavera.com/"
               target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.05 }}

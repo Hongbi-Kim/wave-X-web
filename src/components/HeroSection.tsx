@@ -64,19 +64,19 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button
-            onClick={() => window.open('https://grounded.wavetox.com/', '_blank')}
+            onClick={() => window.open('https://grounded.thewavera.com/', '_blank')}
             className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             ⚖️ {t('hero.cta2')}
           </Button>
           <Button
-            onClick={() => window.open('https://saylong.wavetox.com/', '_blank')}
+            onClick={() => window.open('https://saylong.thewavera.com/', '_blank')}
             className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             🗣️ {t('hero.ctaSayLong')}
           </Button>
           <Button
-            onClick={() => window.open('https://pomopet.wavetox.com/', '_blank')}
+            onClick={() => window.open('https://pomopet.thewavera.com/', '_blank')}
             className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             🐾 {t('hero.cta0')}
