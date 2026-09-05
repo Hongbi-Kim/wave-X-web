@@ -1,4 +1,4 @@
-import { Instagram } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { WaveXLogoFull } from './WaveXLogoFull';
 
@@ -15,7 +15,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="text-white/70 text-center">
             <p>{t('footer.copyright')}</p>
-            <p className="text-sm mt-1">{t('footer.info')}</p>
+            {/* <p className="text-sm mt-1">{t('footer.info')}</p> */}
           </div>
 
           {/* Social Links */}
@@ -28,6 +28,15 @@ export function Footer() {
               className="text-white/70 hover:text-white transition-colors"
             >
               <Instagram className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hongbikim-wavera/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              <Linkedin className="w-5 h-5" />
             </a>
           </div>
         </div>
