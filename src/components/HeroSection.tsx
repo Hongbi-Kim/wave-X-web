@@ -2,9 +2,16 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Button } from './ui/button';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { WaveBackground } from './WaveBackground';
 import { WaveXLogoFull } from './WaveXLogoFull';
+import '../styles/hero.css';
+
+const products = [
+  { name: 'GROUNDED', url: 'https://grounded.thewavera.com/', emoji: '⚖️' },
+  { name: 'SayLong', url: 'https://saylong.thewavera.com/', image: '/images/saylong.png' },
+  { name: 'PomoPet', url: 'https://pomopet.thewavera.com/', image: '/images/pomopet_icon.png' },
+];
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -61,32 +68,27 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="hero-actions"
         >
-          <Button
-            onClick={() => window.open('https://grounded.thewavera.com/', '_blank')}
-            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            ⚖️ {t('hero.cta2')}
-          </Button>
-          <Button
-            onClick={() => window.open('https://saylong.thewavera.com/', '_blank')}
-            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            🗣️ {t('hero.ctaSayLong')}
-          </Button>
-          <Button
-            onClick={() => window.open('https://pomopet.thewavera.com/', '_blank')}
-            className="text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            🐾 {t('hero.cta0')}
-          </Button>
-          <Button
-            onClick={() => navigate('/services')}
-            className="bg-[#1A2E40] hover:bg-[#8DA2D7] text-white px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
+          {products.map((product) => (
+            <a
+              key={product.url}
+              href={product.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-pill"
+            >
+              <span className="hero-pill-icon">
+                {product.image ? <img src={product.image} alt="" /> : product.emoji}
+              </span>
+              <span className="hero-pill-label">{product.name}</span>
+              <ArrowUpRight className="hero-pill-arrow" size={16} strokeWidth={1.8} />
+            </a>
+          ))}
+          <button onClick={() => navigate('/services')} className="hero-more">
             {t('hero.moreServices')}
-          </Button>
+            <ArrowRight size={16} strokeWidth={1.8} />
+          </button>
           {/* <Button
             onClick={() => navigate('/services#daily-fortune')}
             variant="outline"

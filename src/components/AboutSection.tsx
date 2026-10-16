@@ -67,19 +67,17 @@ export function AboutSection() {
                 <p className="hidden sm:block text-[#1A2E40]/70" style={{ fontSize: 'clamp(0.65rem, 2.8vw, 1rem)' }}>{value.description}</p>
               </motion.div>
 
-              {index < values.length - 1 && (
-                <div className="hidden lg:block mt-8">
-                  <svg className="w-full h-8" viewBox="0 0 100 20" preserveAspectRatio="none">
-                    <path
-                      d="M0 10 Q 25 5, 50 10 T 100 10"
-                      stroke="#8DA2D7"
-                      strokeWidth="2"
-                      fill="none"
-                      opacity="0.3"
-                    />
-                  </svg>
-                </div>
-              )}
+              <div className="hidden lg:block mt-8">
+                <svg className="w-full h-8" viewBox="0 0 100 20" preserveAspectRatio="none">
+                  <path
+                    d="M0 10 Q 25 5, 50 10 T 100 10"
+                    stroke="#8DA2D7"
+                    strokeWidth="2"
+                    fill="none"
+                    opacity="0.3"
+                  />
+                </svg>
+              </div>
             </div>
           ))}
         </div>
