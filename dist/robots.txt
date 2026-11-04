@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wavetox.com/sitemap.xml
+Sitemap: https://thewavera.com/sitemap.xml

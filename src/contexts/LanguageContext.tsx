@@ -67,7 +67,7 @@ const translations = {
     'luckydream.feature2': '궁금한 점 질문 — 꿈과 연결된 맞춤 답변',
     'luckydream.feature3': '꿈과 연결된 행운의 아이템',
     'luckydream.feature4': '꿈의 요정이 전하는 꿈 카드',
-    'luckydream.cta': '시작하기',
+    'luckydream.cta': '시작하기 (토스 미니앱)',
     'luckydream.badge': 'AI 웹 서비스',
 
     // Mallimi
@@ -101,6 +101,18 @@ const translations = {
     'grounded.feature3': '참조 조문 확장 — 연결된 법령·시행령·시행규칙까지 확인',
     'grounded.feature4': '근거 확인 — 답변에 실제 사용된 법령과 조문 원문 제공',
     'grounded.cta': '베타서비스 시작하기',
+
+    // 별보러가자
+    'stars.name': '별보러가자',
+    'stars.slogan': '오늘 밤, 함께 별 보러 갈래요?',
+    'stars.subSlogan': '바쁜 하루 끝, 잠시 쉬어 가는 온라인 천문대∙우주',
+    'stars.title': '별보러가자 — 온라인 천문대∙우주',
+    'stars.description': '지금 이 시각 진짜 하늘의 별과 별자리를 보며 돗자리에 눕고, 모닥불 곁에 앉고, 소원 돌을 놓는 작은 3D 공원이에요. 다른 방문자와 조용히 인사를 나누고, 외계인의 비행접시를 빌려 우주로 잠시 다녀올 수도 있어요.',
+    'stars.feature1': '실시간 밤하늘 — 지금 시각의 별·별자리·행성',
+    'stars.feature2': '함께 쉬기 — 다른 방문자와 인사·짧은 대화',
+    'stars.feature3': '소원 돌탑 — 소원 돌을 놓고 다른 사람의 소원 읽기',
+    'stars.feature4': '우주 산책 — 무중력으로 떠다니며 지구와 행성 구경',
+    'stars.cta': '별 보러 가기',
 
     // SayLong
     'saylong.slogan': '한국어로 시작해 영어로 말하다.',
@@ -235,7 +247,7 @@ const translations = {
     'luckydream.feature2': 'Ask a Question — personalized answers linked to your dream',
     'luckydream.feature3': 'Lucky items connected to your dream',
     'luckydream.feature4': 'A dream card delivered by the Dream Fairy',
-    'luckydream.cta': 'Get Started',
+    'luckydream.cta': 'Get Started (in Toss Mini App)',
     'luckydream.badge': 'AI Web Service',
 
     // Mallimi
@@ -269,6 +281,18 @@ const translations = {
     'grounded.feature3': 'Practical Application — Case-based answers with precedents',
     'grounded.feature4': 'Latest Regulations — Auto-updates with amendments',
     'grounded.cta': 'Coming Soon',
+
+    // StarsGachi
+    'stars.name': 'StarsGachi',
+    'stars.slogan': 'Shall we go stargazing tonight?',
+    'stars.subSlogan': 'An online observatory to rest a while after a busy day',
+    'stars.title': 'StarsGachi — Online Observatory',
+    'stars.description': 'A small 3D park where you lie on a picnic mat, sit by the campfire, and leave a wish stone under the real sky of this very moment. Quietly greet other visitors, or borrow an alien\'s flying saucer for a short trip to space.',
+    'stars.feature1': 'Live Night Sky — Stars, constellations and planets right now',
+    'stars.feature2': 'Rest Together — Greetings and short chats with other visitors',
+    'stars.feature3': 'Wish Cairn — Leave a wish stone and read others\' wishes',
+    'stars.feature4': 'Space Walk — Float in zero gravity past Earth and the planets',
+    'stars.cta': 'Go Stargazing',
 
     // SayLong
     'saylong.slogan': 'Start in Korean. Speak in English.',

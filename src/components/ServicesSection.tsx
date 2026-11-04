@@ -11,10 +11,18 @@ import {
   Sparkles, Heart,
   TreePine, Gift, PartyPopper,
   Clock, Smile, Shield, Moon, Star,
+  Telescope, Users, Rocket,
 } from 'lucide-react';
 
 export function ServicesSection() {
   const { t, language } = useLanguage();
+
+  const starsFeatures = [
+    { icon: Telescope, text: t('stars.feature1') },
+    { icon: Users,     text: t('stars.feature2') },
+    { icon: Sparkles,  text: t('stars.feature3') },
+    { icon: Rocket,    text: t('stars.feature4') },
+  ];
 
   const pomopetFeatures = [
     { icon: Clock, text: t('pomopet.feature1') },
@@ -85,13 +93,89 @@ export function ServicesSection() {
           <h2 className="text-[#1A2E40]">{t('services.title')}</h2>
         </motion.div>
 
+        {/* 별보러가자 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-24 bg-gradient-to-br from-white to-[#E6E9F7] rounded-3xl p-8 md:p-12 shadow-xl"
+          style={{ order: 1 }}
+        >
+          <div className="mb-3 flex items-center gap-4">
+            <img
+              src="/images/starsgachi.ico"
+              alt="별보러가자 icon"
+              style={{ width: 50, height: 50, flexShrink: 0, objectFit: 'cover', borderRadius: 12 }}
+            />
+            <span style={{
+              fontFamily: '"Noto Serif KR", serif',
+              fontWeight: 700,
+              fontSize: '1.25rem',
+              letterSpacing: '-0.01em',
+              background: 'linear-gradient(135deg, #2c3a78 0%, #6c7fd0 60%, #c9a84c 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
+              {t('stars.name')}
+            </span>
+          </div>
+
+          <div className="mb-6">
+            <div className="text-[#3B4A8C] mb-2">{t('stars.slogan')}</div>
+            <div className="text-[#3B4A8C]/80">{t('stars.subSlogan')}</div>
+          </div>
+
+          <h3 className="text-[#1A2E40] mb-4">{t('stars.title')}</h3>
+          <p className="text-[#1A2E40]/80 mb-8 max-w-3xl leading-relaxed">
+            {t('stars.description')}
+          </p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="mb-8"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://starsgachi.thewavera.com/', '_blank')}
+              className="px-12 py-3.5 bg-black text-white border-2 border-black transition-all duration-200"
+              style={{
+                fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+                fontWeight: 900,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}
+            >
+              ✨ {t('stars.cta')}
+            </motion.button>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {starsFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                className="flex items-start space-x-3 bg-white/60 rounded-xl p-4"
+              >
+                <feature.icon className="w-5 h-5 text-[#3B4A8C] flex-shrink-0 mt-1" />
+                <span className="text-[#1A2E40]/90">{feature.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* PomoPet */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-24 bg-gradient-to-br from-white to-[#FFF0ED] rounded-3xl p-8 md:p-12 shadow-xl"
-          style={{ order: 3 }}
+          style={{ order: 4 }}
         >
           <div className="mb-3 flex items-center gap-4">
             <img
@@ -158,7 +242,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-24 bg-gradient-to-br from-white to-[#E8EBF0] rounded-3xl p-8 md:p-12 shadow-xl"
-          style={{ order: 1 }}
+          style={{ order: 2 }}
         >
           <div className="mb-6">
             <GroundedLogoFull size="small" animated={true} showTagline={false} />
@@ -218,7 +302,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-24 bg-gradient-to-br from-white to-[#F0EBF8] rounded-3xl p-8 md:p-12 shadow-xl"
-          style={{ order: 4 }}
+          style={{ order: 5 }}
         >
           <div className="mb-3 flex items-center gap-4">
             <img
@@ -293,7 +377,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
           className="mb-24 bg-gradient-to-br from-white to-[#FFF3E0] rounded-3xl p-8 md:p-12 shadow-xl"
-          style={{ order: 5 }}
+          style={{ order: 6 }}
         >
           <div className="mb-3 flex items-center gap-4">
             <img
@@ -357,7 +441,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mb-24 bg-gradient-to-br from-white to-[#EDE8FF] rounded-3xl p-8 md:p-12 shadow-xl"
-          style={{ order: 2 }}
+          style={{ order: 3 }}
         >
           <div className="mb-3 flex items-center gap-4">
             <img
@@ -557,7 +641,7 @@ export function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-24 bg-gradient-to-br from-white to-[#FFF5F6] rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden"
-          style={{ order: 6 }}
+          style={{ order: 7 }}
         >
           {/* 상단 로고/아이콘 영역
           <div className="mb-6 flex items-center justify-between gap-4">

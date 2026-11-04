@@ -7,7 +7,8 @@ import { WaveBackground } from './WaveBackground';
 import { WaveXLogoFull } from './WaveXLogoFull';
 import '../styles/hero.css';
 
-const products = [
+const products: { name?: string; nameKey?: string; url: string; emoji?: string; image?: string }[] = [
+  { nameKey: 'stars.name', url: 'https://starsgachi.thewavera.com/', image: '/images/starsgachi.ico' },
   { name: 'GROUNDED', url: 'https://grounded.thewavera.com/', emoji: '⚖️' },
   { name: 'SayLong', url: 'https://saylong.thewavera.com/', image: '/images/saylong.png' },
   { name: 'PomoPet', url: 'https://pomopet.thewavera.com/', image: '/images/pomopet_icon.png' },
@@ -81,7 +82,7 @@ export function HeroSection() {
               <span className="hero-pill-icon">
                 {product.image ? <img src={product.image} alt="" /> : product.emoji}
               </span>
-              <span className="hero-pill-label">{product.name}</span>
+              <span className="hero-pill-label">{product.nameKey ? t(product.nameKey) : product.name}</span>
               <ArrowUpRight className="hero-pill-arrow" size={16} strokeWidth={1.8} />
             </a>
           ))}
